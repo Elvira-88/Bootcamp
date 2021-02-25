@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheatsheet</title>
 </head>
+
 <body>
     <!-- Enlaces internos y externos -->
     <a href="https://google.com" target="_blank">Ir a Google</a>
@@ -27,6 +29,200 @@
     <hr>
 
     <!-- Textos / Párrafos / Paragraphs -->
+    <p>Lorem ipsum <b>sit amet</b> consectetur adipisicing elit. Dicta maxime inventore aliquam necessitatibus ab
+        reprehenderit
+        iure, enim nulla <em>ullam rerum</em> blanditiis quidem amet officia quisquam impedit itaque temporibus
+        explicabo <strong>quae expedita</strong> nemo voluptatem ad sequi mollitia quas, voluptate consectetur? In
+        excepturi
+        blanditiis ratione ducimus eaque veniam magni!</p>
 
+    <pre>Lorem ipsum <b>sit amet</b> consectetur elit. Dicta inventore aliquam necessitatibus ab reprehenderit
+        iure, enim nulla a. <s>blanditiis</s> maxime quidem amet officia quisquam impedit temporibus
+        explicabo <strong>quae expedita</strong> nemo voluptatem ad sequi mollitia quas, voluptate consectetur? In excepturi
+        blanditi ducimus veniam magni!</pre>
+
+    <p>
+        <span class="ingredients">Lorem ipsum dolor <strong>sit amet</strong> consectetur</span> adipisicing elit.
+        Laudantium similique <b>odio dicta</b> obcaecati nihil enim quo
+        accusantium doloremque! Voluptatum, non.
+    </p>
+
+    <p>
+        La molécula preferida es C<sub>8</sub>H<sub>10</sub>
+    </p>
+
+    <p>
+        <var>a</var><sup>2</sup>+<var>b</var><sup>3</sup>
+    </p>
+
+    <p>Las clases del Bootcamp empiezan a las <time datetime="09:30">09:30</time></p>
+    <p>El primer día fue el <time datetime="2021-02-01">1 de febrero</time></p>
+
+    <br><hr><br>
+
+    <!-- Contenedores / Containers -->
+
+ <nav>
+     <a href="">Enlace 1</a>
+     <a href="">Enlace 2</a>
+     <a href="">Enlace 3</a>
+ </nav>
+
+ <section>
+    <article>
+        <h1>Título del artículo</h1>
+        <p>Contenido del artículo</p>
+    </article>
+    <a href="">Leer más</a>
+ </section>
+
+ <aside>
+     <p>Menú generalmente lateral</p>
+ </aside>
+
+ <footer>
+     <p>Pie de página</p>
+     <address>
+         Málaga, 29007
+     </address>
+ </footer>
+
+ <div class="container">
+     <p>Contenedor genérico para agrupar elementos</p>
+</div>
+
+<br><hr><br>
+
+<!-- Listas / Lists  -->
+
+<ul>  <!-- Desordenada -->
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3
+        <ul>
+            <li>Elemento</li>
+            <li>Elemento
+                <ul>
+                    <li>Elemento</li>
+                    <li>Elemento</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Elemento 4</li>
+    <li>Elemento 5</li>
+</ul>
+
+<ol>
+    <li>Elemento</li>
+    <li>Elemento
+        <ul>
+            <li>Elemento</li>
+            <li>Elemento</li>
+        </ul>
+    </li>
+    <li>Elemento</li>
+</ol>
+
+<ol start="500">
+    <li>Elemento</li>
+    <li>Elemento</li>
+    <li>Elemento</li>
+</ol>
+
+<br><hr><br>
+
+<!-- Tablas / Tables -->
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Jhon</td>
+            <td>jdoe@gmail.com</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Jane Doe</td>
+            <td>janedoe@gmail.com</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Alumno Codespace</td>
+            <td>ac@codespaceacademy.com</td>
+            <td>40</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Edad</th>
+        </tr>
+    </tfoot>
+</table>
+
+<br><hr><br>
+
+<!-- Formularios / Forms -->
+
+<form action="" method="get">
+
+    <div class="inputBlock">
+        <label for="nameInput">Nombre</label><br>
+        <input type="text" id="nameInput" name="userName" maxlength="10" placeholder="Introduce tu nombre">
+    </div><br>
+
+    <div class="inputBlock">
+        <label for="lastnameInput">Apellidos</label><br>
+        <input type="text" id="lastnameInput" name="lastName" placeholder="Introduce tus apellidos">
+    </div><br>
+
+    <div class="inputBlock">
+        <label for="emailInput">Email: (*)</label><br>
+        <input required type="email" id="emailInput" name="userEmail" placeholder="Introduce tu email">
+    </div><br>
+
+    <div class="inputBlock">
+        <label for="passwordInput">Contraseña</label><br>
+        <input type="password" id="passwordInput" name="passwrodInput" placeholder="**************">
+    </div>
+
+    <div class="inputBlock">
+        <label for="messageInput">Mensaje</label><br>
+        <textarea name="messageInput" id="messageInput" cols="50" rows="10"></textarea>
+    </div>
+
+    <div class=inputBlock>
+        <label for="sex">Género</label><br>
+        <select name="sexInput" id="sexInput">
+            <option value="" hidden></option> 
+            <option value="female" disabled>Femenino</option> 
+            <option value="male">Masculino</option> 
+            <option value="female">Otro</option> 
+        </select>
+
+    </div>
+    <br><br>
+
+    <input id="ageInput" name="ageInput" value="30" type="number" min="0" max="120">
+
+    <input type="date">
+    
+    <br><br>
+
+    <input type="submit" value="Guardar">
+    
+    
+</form>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
+
 </html>

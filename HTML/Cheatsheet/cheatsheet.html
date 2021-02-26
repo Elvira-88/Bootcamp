@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+</head>
+
+<body>
+    <!-- Enlaces internos y externos -->
+    <a href="https://google.com" target="_blank">Ir a Google</a>
+    <a href="folder/blog.html">Ir a Blog</a>
+
+    <!-- Línea en blanco -->
+    <br>
+
+    <!-- Línea separadora -->
+    <hr>
+
+    <!-- Títulos / Headings -->
+    <h1>Título 1</h1>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
+
+    <hr>
+
+    <!-- Textos / Párrafos / Paragraphs -->
+    <p>Lorem ipsum <b>sit amet</b> consectetur adipisicing elit. Dicta maxime inventore aliquam necessitatibus ab
+        reprehenderit
+        iure, enim nulla <em>ullam rerum</em> blanditiis quidem amet officia quisquam impedit itaque temporibus
+        explicabo <strong>quae expedita</strong> nemo voluptatem ad sequi mollitia quas, voluptate consectetur? In
+        excepturi
+        blanditiis ratione ducimus eaque veniam magni!</p>
+
+    <pre>Lorem ipsum <b>sit amet</b> consectetur elit. Dicta inventore aliquam necessitatibus ab reprehenderit
+        iure, enim nulla a. <s>blanditiis</s> maxime quidem amet officia quisquam impedit temporibus
+        explicabo <strong>quae expedita</strong> nemo voluptatem ad sequi mollitia quas, voluptate consectetur? In excepturi
+        blanditi ducimus veniam magni!</pre>
+
+    <p>
+        <span class="ingredients">Lorem ipsum dolor <strong>sit amet</strong> consectetur</span> adipisicing elit.
+        Laudantium similique <b>odio dicta</b> obcaecati nihil enim quo
+        accusantium doloremque! Voluptatum, non.
+    </p>
+
+    <p>
+        La molécula preferida es C<sub>8</sub>H<sub>10</sub>
+    </p>
+
+    <p>
+        <var>a</var><sup>2</sup>+<var>b</var><sup>3</sup>
+    </p>
+
+    <p>Las clases del Bootcamp empiezan a las <time datetime="09:30">09:30</time></p>
+    <p>El primer día fue el <time datetime="2021-02-01">1 de febrero</time></p>
+
+    <br>
+    <hr><br>
+
+    <!-- Contenedores / Containers -->
+
+    <nav>
+        <a href="">Enlace 1</a>
+        <a href="">Enlace 2</a>
+        <a href="">Enlace 3</a>
+    </nav>
+
+    <section>
+        <article>
+            <h1>Título del artículo</h1>
+            <p>Contenido del artículo</p>
+        </article>
+        <a href="">Leer más</a>
+    </section>
+
+    <aside>
+        <p>Menú generalmente lateral</p>
+    </aside>
+
+    <footer>
+        <p>Pie de página</p>
+        <address>
+            Málaga, 29007
+        </address>
+    </footer>
+
+    <div class="container">
+        <p>Contenedor genérico para agrupar elementos</p>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <!-- Listas / Lists  -->
+
+    <ul>
+        <!-- Desordenada -->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3
+            <ul>
+                <li>Elemento</li>
+                <li>Elemento
+                    <ul>
+                        <li>Elemento</li>
+                        <li>Elemento</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+
+    <ol>
+        <li>Elemento</li>
+        <li>Elemento
+            <ul>
+                <li>Elemento</li>
+                <li>Elemento</li>
+            </ul>
+        </li>
+        <li>Elemento</li>
+    </ol>
+
+    <ol start="500">
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+
+    <br>
+    <hr><br>
+
+    <!-- Tablas / Tables -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jhon</td>
+                <td>jdoe@gmail.com</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>janedoe@gmail.com</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alumno Codespace</td>
+                <td>ac@codespaceacademy.com</td>
+                <td>40</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+    <hr><br>
+
+    <!-- Formularios / Forms -->
+
+    <form action="" method="get">
+
+        <div class="inputBlock">
+            <label for="nameInput">Nombre</label><br>
+            <input type="text" id="nameInput" name="userName" maxlength="10" placeholder="Introduce tu nombre">
+        </div><br>
+
+        <div class="inputBlock">
+            <label for="lastnameInput">Apellidos</label><br>
+            <input type="text" id="lastnameInput" name="lastName" placeholder="Introduce tus apellidos">
+        </div><br>
+
+        <div class="inputBlock">
+            <label for="emailInput">Email: (*)</label><br>
+            <input required type="email" id="emailInput" name="userEmail" placeholder="Introduce tu email">
+        </div><br>
+
+        <div class="inputBlock">
+            <label for="passwordInput">Contraseña</label><br>
+            <input type="password" id="passwordInput" name="passwrodInput" placeholder="**************">
+        </div>
+
+        <div class="inputBlock">
+            <label for="messageInput">Mensaje</label><br>
+            <textarea name="messageInput" id="messageInput" cols="50" rows="10"></textarea>
+        </div>
+
+        <div class=inputBlock>
+            <label for="sex">Género</label><br>
+            <select name="sexInput" id="sexInput">
+                <option value="" hidden></option>
+                <option value="female" disabled>Femenino</option>
+                <option value="male">Masculino</option>
+                <option value="female">Otro</option>
+            </select>
+
+        </div>
+        <br><br>
+
+        <div class="inputBlock">
+
+            <label for="ageInput">Edad</label>
+            <input id="ageInput" name="ageInput" value="30" type="number" min="0" max="120">
+
+            <label for="birthdayInput">Fecha de nacimiento</label>
+            <input type="date" id="birthdayInput" name="birthdayInput">
+        </div>
+
+        <br><br>
+
+        <div class="inputBlock">
+            <label for="carBrandInput">La marca de tu coche</label>
+            <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
+            <datalist id="carBrandList">
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="mustang">Mustang</option>
+                <option value="ford">Ford</option>
+                <option value="volkswagen">Volkswagen</option>
+            </datalist>
+        </div>
+
+        <fieldset disabled>
+            <legend>Información de tu pareja</legend>
+            <div class="inputBlock">
+                <label for="nameInput2">Nombre</label><br>
+                <input type="text" id="nameInput2" name="userName" maxlength="10" placeholder="Introduce tu nombre">
+            </div><br>
+
+            <div class="inputBlock">
+                <label for="lastnameInput2">Apellidos</label><br>
+                <input type="text" id="lastnameInput2" name="lastName" placeholder="Introduce tus apellidos">
+            </div><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado civil</legend>
+            <div>
+                <input type="radio" name="civilState" id="marriedInput">
+                <label for="marriedInput">Casado</label>
+            </div>
+            <div>
+                <input type="radio" name="civilState" id="singleInput" checked>
+                <label for="singleInput">Soltero</label>
+            </div>
+            <div>
+                <input type="radio" name="civilState" id="divorcedInput" required>
+                <label for="divorcedInput">Divorciado</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Productos</legend>
+            <div>
+                <input type="checkbox" name="iphoneProduct" id="iphoneProduct">
+                <label for="iphoneProduct">iPhone</label>
+            </div>
+            <div>
+                <input type="checkbox" name="macbookProduct" id="macbookProduct" checked>
+                <label for="macbookProduct">Macbook Pro</label>
+            </div>
+            <div>
+                <input type="checkbox" name="airpodsProduct" id="airpodsProduct">
+                <label for="airpodsProduct">Airpods</label>
+            </div>
+        </fieldset>
+
+        <label for="rangeInput">Seleccione cantidad de elementos</label>
+        <input type="range" name="rangeInput" id="rangeInput">
+
+        <br><br>
+
+        <label for="fuelLevel">Cantidad de gasolina</label>
+        <meter min="0" max="100" id="fuelLevel" value="60" ></meter>
+
+        <progress max="100" value="33"></progress>
+
+        <br><br>
+
+        <label for="fileInput">Subir un archivo</label>
+        <input type="file" id="fileInput" name="fileInput">
+
+        <br><br>
+
+        <input type="submit" value="Guardar">
+        <input type="reset" value="Vaciar">
+
+
+    </form>
+
+    <br>
+
+    <!-- Multimedia / Media -->
+
+    <img src="Images/th.jpeg" alt="Paisaje">
+
+    <br><br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DaOj_HNDxCw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

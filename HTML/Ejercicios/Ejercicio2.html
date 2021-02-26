@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+
+<h2>Formulario de Registro</h2>
+
+<form action="" method="get"></form>
+    
+<fieldset>
+    <legend>Información personal</legend>
+    <div class=inputBlock>
+        <label for="nameInput">Nombre</label>
+        <input type="text" id=nameInput name="userName" placeholder="Elon">
+        <label for="lastName">Apellidos</label>
+        <input type="text" id=nameInput name=lastName placeholder="Mask">
+    </div>
+    
+    <br>
+
+    <div class=inputBlock>
+        <label for="ageInput">Edad</label>
+        <input id=ageInput name=ageInput type="number" value="40">
+    </div>
+
+    <br>
+
+    <div class="inputBlock">
+        <label for="emailInput">Email:</label>
+        <input required type="email" id="emailInput" name="userEmail" placeholder="nombre@email.com">
+    </div>
+
+    <br>
+
+    <div class="inputBlock">
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" name="passwrodInput" placeholder="**************">
+    </div>
+
+    <fieldset>
+        <legend>Género</legend>
+        <div>
+            <input type="radio" name="gender" id="womanInput">
+            <label for="womanInput">Mujer</label>            
+        </div>
+        <div>
+            <input type="radio" name="gender" id="manInput">
+            <label for="manInput">Hombre</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="otherInput">
+            <label for="otherInput">Otro</label>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <div class="inputBlock">
+        <label for="countryInput">País</label>
+        <input id="countryInput" name="country" placeholder="Introduce tu país">
+    </div>
+
+    <br>
+
+    <div class=inputBlock>
+        <label for="languageInput">Lenguaje de programación</label>
+        <select name="languageInput" id="languageInput">
+            <option value="javascript">Javascript</option>
+        </select>     
+    </div>
+
+    <br>
+
+    <fieldset>
+        <legend>Selecciona tu academia favorita</legend>
+        <div>
+            <input type="radio" name="academy" id="CodeSpaceInput">
+            <label for="CodeSpaceInput">Code Space Academy</label>            
+        </div>
+        <div>
+            <input type="radio" name="academy" id="Academy2Input">
+            <label for="Academy2Input">Academia2</label>
+        </div>
+        <div>
+            <input type="radio" name="academy" id="Academy3Input">
+            <label for="Academy3Input">Academia3</label>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <div>
+        <input type="checkbox" name="receiveEmail" id="receiveEmail">
+        <label for="receiveEmail">Acepto recibir cientos de miles de correo irrelevantes</label>
+    </div>
+
+    <div>
+        <input type="checkbox" name="terms&conditions" id="terms&conditions">
+        <label for="terms&conditions">Acepto los términos y condiciones</label>
+    </div>
+
+    <br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Vaciar formulario">   
+
+</fieldset>
+
+</body>
+</html>

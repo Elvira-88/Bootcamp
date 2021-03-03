@@ -1,0 +1,12 @@
+#primero {
+    height: 50vh;
+    background-image: url(background.jpeg);
+    background-position: center bottom;
+}
+
+
+.empty {
+    background-color: aquamarine; 
+    height: 500px;
+    width: 100px;
+}

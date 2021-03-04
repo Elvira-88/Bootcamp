@@ -1,12 +1,88 @@
 #primero {
     height: 50vh;
-    background-image: url(background.jpeg);
-    background-position: center bottom;
+
+    /* Imagen de fondo */
+    /* background-image: url(background.jpeg); */
+
+    /* eje x: left center right//eje y: top center bottom */
+    background-position: center bottom; 
+
+
+    /* Cuando la imagen es más pequeña que el contenedor */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+
+    /* Margenes */
+    /* margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; */
+    /* margin: 20px; */
+
+    /* Bordes */
+    /* border-bottom: seagreen;
+    border-top: yellow;
+    border-width: 5px;
+    border-style: solid; */
+
+    border: 5px solid seagreen;
+    border-bottom: 15px solid red;
+
+    /* Padding */
+    /* padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px; */
+    padding: 100px 25px 50px 0px;
+}
+
+.empty {
+    height: 2000px;
+    background-color: red; 
+    width: 50%;
+}
+
+h1, span {
+      /* color: white; */
+      border: 5px solid seagreen
 }
 
 
-.empty {
-    background-color: aquamarine; 
-    height: 500px;
-    width: 100px;
+/* Posicionamiento */
+
+/* Tipos de Display: none, inline, block, inline-block */
+[class^="box"] {
+    background-color: steelblue;
+}
+
+/* .box-0, .box-1, .box-2, .box-4, .box-5, .box-6 {
+background-color: steelblue;
+} equivalente al anterior*/
+
+.box-0 {
+    display: none;
+}
+
+.box-3, 
+.box-4, 
+.box-3 p,
+.box-4 p {
+    display: inline-block;
+}
+
+.box-5, /* selecciona el div box clase box5 */
+.box-6, /* selecciona el div box clase box6 */
+.box-5 p, /* selecciona el párrafo que está en el div con clase box5 */
+.box-6 p { /* selecciona el párrafo que está en el div con clase box5 */
+    display: inline;
+}
+ 
+
+/* Centrar horizontalmente (eje X) */
+.x-centered {
+    background-color: teal;
+    height: 50px;
+    width: 25%;
+    
+    margin: auto;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,142 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    
-<div id="primero">   
-    <h1>Título</h1>
-    <span>Texto de prueba</span>
-</div>
 
-<br>
+    <div id="primero">
+        <h1>Título</h1>
+        <span>Texto de prueba</span>
+    </div>
 
-<div class="empty"></div>
+    <br>
+
+    <div class="empty"></div>
 
 
-<!-- Posicionamiento -->
+    <!-- Posicionamiento -->
 
-<h2>Tipos de Display: none, inline, block, inline-block</h2>
+    <h2>Tipos de Display: none, inline, block, inline-block</h2>
 
-<!-- div.box-$*6>p{Lorem ipsum} -->
-<div class="box-0">
-    <p>Lorem ipsum</p>
-</div>
-<div class="box-1">
-    <p>Lorem ipsum</p>
-</div>
-<div class="box-2">
-    <p>Lorem ipsum</p>
-</div>
-<div class="box-3">
-    <p>Lorem ipsum</p>
-</div>
-<div class="box-4">
-    <p>Lorem ipsum</p>
-</div>
-<div class="box-5">
-    <p>Lorem ipsum</p>
-</div>&nbsp;
-<div class="box-6">
-    <p>Lorem ipsum</p>
-</div>
+    <!-- div.box-$*6>p{Lorem ipsum} -->
+    <div class="box-0">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="box-1">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="box-2">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="box-3">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="box-4">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="box-5">
+        <p>Lorem ipsum</p>
+    </div>&nbsp;
+    <div class="box-6">
+        <p>Lorem ipsum</p>
+    </div>
 
-<h2>Centrar horizontalmente (eje X)</h2>
-<div class="x-centered"></div>
+    <h2>Centrar horizontalmente (eje X)</h2>
+    <div class="x-centered rectangle"></div>
+
+    <h2>Posición relativa</h2>
+    <div class="pos-relative rectangle"></div>
+
+    <h2>Posición absoluta</h2>
+    <div class="pos-absolute-parent">
+        <div class="pos-absolute-child"></div>
+    </div>
+
+    <h2>Posición fija / fixed</h2>
+    <div class="pos-fixed">
+        <a href="#">Botón fijo</a>
+    </div>
+
+    <h2>Posición sticky</h2>
+    <div class="pos-sticky">
+        <a href="#">Inicio</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <h2>Posicionamiento flotante: divs dentro de otros divs</h2>
+    <div class="pos-float-parent">
+        <div class="pos-float-child-1">Caja 1 (float left)</div>
+        <div class="pos-float-child-2">caja 2 (float right)</div>
+        <div class="pos-float-child-3">Caja 3 normal</div>
+        <div class="pos-float-child-4">Caja 4 normal</div> 
+        <div class="pos-float-child-5">Caja 5 (float right)</div>
+    </div>
+
+    <div class="pos-float-child-6">Caja 6 normal</div>
+
+    <h2>Overflow - Gestión del desbordamiento del contenido</h2>
+
+    <h3>overflow: hidden</h3>
+    <div class="overflow-parent-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate sequi et perferendis maiores itaque dolore cum enim quo nemo quas, ratione repudiandae minima excepturi eius illo quidem magni alias.</p>
+    </div>
+
+    <h3>overflow: visible</h3>
+    <div class="overflow-parent-2">
+        <p>Nemo reprehenderit maxime nisi eius. Commodi, sed non quibusdam qui in ipsam id perferendis porro eligendi enim, vel a dolore dolorem omnis obcaecati nulla accusantium quidem error totam placeat libero.</p>
+    </div>
+
+    <h3>overflow: scroll</h3>
+    <div class="overflow-parent-3">
+        <p>Magnam, ratione nam! Natus, quaerat odit enim eligendi excepturi cumque, nemo atque tempore numquam laudantium ipsa ea hic voluptates quis? Velit voluptatum voluptatibus consequuntur amet fugit provident quae aperiam repellendus?</p>
+    </div>
+
+
+    <h2>Tamaño de cajas (box-sizing)</h2>
+    <div class="box-sizing-parent">
+        <div class="box-sizing-child"></div>
+        <div class="box-sizing-child border-box"></div>
+    </div>
+
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum, similique incidunt quisquam aliquid rerum
+        omnis ab ullam dolores vero cupiditate nisi suscipit quibusdam fugiat delectus consequatur fuga velit impedit,
+        in fugit voluptatem. Dolor voluptatibus maxime repellendus! Labore dicta rerum qui magnam molestiae eaque
+        debitis ipsam, explicabo laboriosam est doloribus delectus tempora? Sapiente iste cum officia ullam tempora
+        corrupti doloremque? Assumenda numquam minima quas aliquam? Quae ab, distinctio odit voluptate, ducimus
+        laboriosam praesentium magni ipsam provident iure quibusdam delectus quaerat dolor blanditiis voluptates veniam.
+        Nihil aperiam aut harum cumque eius autem enim natus non, atque facilis officiis, voluptatem repudiandae nobis
+        ipsam aspernatur assumenda magnam sit debitis. Expedita repudiandae unde consequatur laboriosam itaque
+        aspernatur voluptatibus vero sequi distinctio, soluta cupiditate dolore eligendi totam saepe labore quia
+        repellendus modi ratione natus quidem voluptate odit odio! Eum hic nobis tempora et ipsa. Nobis, deleniti!
+        Mollitia perferendis eveniet magni accusamus ratione velit atque soluta alias maiores earum obcaecati a
+        repudiandae odio laudantium quidem, vel tempore dolore quam reprehenderit animi odit, molestiae numquam? Fugit
+        beatae odio ipsum id possimus cum commodi, consectetur eveniet pariatur non quisquam sunt aut, eius reiciendis
+        numquam doloribus ad perspiciatis sed neque eaque eligendi voluptatum vitae dolore esse! Quibusdam minus dolorem
+        amet libero velit omnis, neque maiores non tempore cumque iste hic fuga. Tempore aperiam perferendis, sint
+        aliquid cumque natus reiciendis nisi dignissimos adipisci, doloremque impedit deleniti sed eveniet, dolores non
+        dolorem laudantium. Vitae explicabo totam quam asperiores unde, enim sunt similique minus blanditiis ipsa
+        molestiae. Laudantium cum minima provident neque ab impedit ipsa qui modi. Consequuntur aliquid minima odio,
+        quibusdam dolor libero exercitationem molestias sint corporis temporibus hic quia reiciendis error architecto
+        quas sequi cupiditate delectus voluptas tempore? Error cum vero nihil explicabo voluptas atque itaque quaerat
+        amet quam illo rem et exercitationem, eius iusto doloremque dolores culpa dolorem delectus eaque impedit autem
+        accusamus? Eaque placeat molestiae nesciunt delectus libero fuga ea molestias cum enim similique suscipit
+        aperiam quaerat possimus obcaecati quisquam hic fugiat aliquid tenetur autem aut odio praesentium, odit
+        recusandae sunt! Quibusdam nobis neque cupiditate. Obcaecati cumque dignissimos veritatis illo voluptatibus non
+        libero animi quaerat est possimus laudantium iste quibusdam sequi error, alias, a iusto maiores, odio
+        architecto. Dolor esse magnam suscipit consequatur, odio dolorem reprehenderit repudiandae. Error et rerum est
+        nobis tenetur reiciendis impedit perspiciatis corrupti, fuga dolorum earum consequatur nulla consequuntur soluta
+        eius illum deleniti sequi officiis similique praesentium voluptatem culpa. Quis placeat, porro pariatur enim
+        distinctio reiciendis eius quia id molestiae qui aliquam laborum deleniti obcaecati quo at ex dolorem explicabo
+        hic facilis magnam exercitationem facere impedit ducimus. Quasi soluta incidunt, repellendus deserunt maxime
+        dolorum delectus dicta minus ex aliquid eveniet repellat impedit minima atque doloremque tempora aliquam
+        consequatur, dolor sit illum sapiente? Impedit aliquam consequatur est consequuntur reiciendis quis eligendi,
+        fuga rerum. Totam sequi eius corrupti necessitatibus aspernatur voluptates sed facilis nulla. Est minus eaque
+        nulla, odio ex fugiat tempore quod quisquam unde facilis, nisi quidem harum numquam nemo facere asperiores
+        sapiente quos! Recusandae voluptate iusto tempora ullam molestias alias officiis a voluptates. Accusamus!</p> -->
+    <!-- Para poner aire por medio (espacio) -->
+    <div style="height: 1000px;"></div>
 
 </body>
+
 </html>

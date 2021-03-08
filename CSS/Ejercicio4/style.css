@@ -1,0 +1,19 @@
+.first {
+    border: 1px solid black;
+    height: 140px;
+}
+
+.firstleft {
+    background-position: left;
+
+    background-repeat: no-repeat;
+
+
+   
+    
+}
+
+ /* background-image: url(background.jpeg); */
+
+    /* eje x: left center right//eje y: top center bottom */
+    background-position: center bottom; 

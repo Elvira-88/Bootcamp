@@ -1,0 +1,24 @@
+.parent {
+
+    color: black;
+    font-size: 10px;
+
+    list-style-image: url("iconreduced.jpg");
+    list-style-position: inside;
+    
+    
+
+    width: 100px;
+    
+
+
+    cursor: pointer;
+}
+
+.parent li {
+    
+    border: 0.5px solid black;
+
+    background-color: rgb(229, 232, 236);
+
+}

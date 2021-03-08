@@ -154,7 +154,7 @@ background-color: steelblue;
     /* Para gestionar desbordamiento de contenido o para que el padre no colapse si todos los 
     hijos son flotantes (ya que no tendría tamaño virtual al estar flotando), podemos utilizar 
     overflow hidden y obligamos al padre a abarcar a los hijos*/
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .pos-float-child-1 {

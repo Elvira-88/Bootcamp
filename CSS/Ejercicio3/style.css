@@ -1,24 +1,23 @@
 .parent {
 
-    color: black;
-    font-size: 10px;
-
+    color: rgb(80, 74, 74);
+   
     list-style-image: url("iconreduced.jpg");
     list-style-position: inside;
     
+    width: 20%;
     
-
-    width: 100px;
-    
-
-
     cursor: pointer;
 }
 
 .parent li {
     
-    border: 0.5px solid black;
+    border: 0.5px solid rgb(122, 113, 113);
 
     background-color: rgb(229, 232, 236);
+}
 
+.parent li:hover {
+    color: blue;
+    background-color: rgb(202, 200,200);
 }

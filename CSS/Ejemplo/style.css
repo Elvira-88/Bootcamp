@@ -239,3 +239,8 @@ background-color: steelblue;
     margin-top: 10px;
     box-sizing: border-box;
 }
+
+p::first-letter {
+    font-size: 3em;
+    color: red;
+}

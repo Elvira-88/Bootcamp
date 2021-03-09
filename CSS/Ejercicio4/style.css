@@ -3,13 +3,16 @@
     box-sizing: border-box;
 }
 
-
 .container {
     border: 2px solid gray;
     padding: 10px; 
 }
 
 /* Header */
+header {
+    margin-bottom: 20px;
+}
+
 .top-banner {
     position: relative;
 }
@@ -23,8 +26,8 @@
 
 /* Aside */
 aside {
-    float: left;
     width: 25%;
+    float: left;
 }
 
 .news > a, .news span {
@@ -39,10 +42,29 @@ section {
 
 .main-content {
     float: left;
-    width: 74%;
+    width: 75%;
+}
+
+.main-content img {
+    float: left;
+    margin-right: 20px;
 }
 
 .side-content {
     float: right;
     width: 24%;
 }
+
+.clear {
+    clear: both;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+footer span {
+    float: right;
+}
+

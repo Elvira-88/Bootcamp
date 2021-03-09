@@ -1,0 +1,86 @@
+body {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container {
+    padding:1px 10%;
+}
+
+.brand-banner {
+    background-color: coral;
+}
+
+.navbar {
+    background-color:#333;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+.image {
+    background-image: url(fondo.jpeg);
+    background-position: center right;
+    text-align: center;
+    font-size: 2em;
+}
+
+.patern {
+    overflow: hidden;
+}
+
+.right {
+    background-color: #333;
+    float: right;
+    width: 30%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.left {
+    color: gray;
+    float: left;
+    width: 70%;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: gray;
+    text-align: center;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+.right, .left {
+    float: none;
+    width: 100%;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.navbar a {
+  
+}
+
+.navbar li {
+    display: block;
+    margin-top: 15px;
+}
+

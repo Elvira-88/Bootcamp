@@ -2,30 +2,33 @@
 * {
     box-sizing: border-box;
 }
+
+
 .container {
     border: 2px solid gray;
-    padding: 10px;
+    padding: 10px; 
 }
 
+/* Header */
 .top-banner {
-    position:relative;
+    position: relative;
 }
 
 .top-banner form {
-position: absolute;
-right: 10px;
-top: 50%;
-margin-top: -17px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -17px;
 }
 
 /* Aside */
-.news > a, .news span {
-    display: block;
-}
-
 aside {
     float: left;
     width: 25%;
+}
+
+.news > a, .news span {
+    display: block;
 }
 
 /* Contenido central */
@@ -36,28 +39,10 @@ section {
 
 .main-content {
     float: left;
-    width: 75%;
-}
-
-.main-content img {
-    float: left;
-    margin-right: 20px;
+    width: 74%;
 }
 
 .side-content {
     float: right;
     width: 24%;
-}
-
-.clear {
-    clear: both;
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-}
-
-footer span {
-    float: right;
 }

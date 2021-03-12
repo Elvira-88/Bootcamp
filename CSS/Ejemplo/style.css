@@ -439,3 +439,90 @@ p::first-letter {
 .grid-parent-3 > .grid-child-5 {
     grid-area: footer;
 }
+
+/* Iconos / Icons */
+.menu-icon {
+color: coral;
+}
+
+/* Degradados o gradientes de color */
+[class^="gradient"] {
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.gradient-1 {
+    background: linear-gradient(to right, darkblue, white);
+}
+
+.gradient-2 {
+    background: linear-gradient(to bottom, white, darkblue 20%, white);
+}
+
+.gradient-3 {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)), url(background.jpeg);
+    background-size: cover;
+}
+
+.gradient-4 {
+    background: radial-gradient(white, blue,red);
+    width: 50%;
+    box-shadow: 5px 5px 15px black;
+}
+
+/* Transformaciones */
+.transform {
+    height: 100px;
+    width: 100px;
+    background-color: #333;
+
+    transform: translate(300px, -20px) rotate(45deg) scale(0.8) skewX(25deg);
+}
+
+/* Transitions */
+.transitions {
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* transition-property: transform;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out; */
+    transition: all 0.5s ease-in;
+}
+
+.transitions:hover {
+    transform: scale(1.3) rotate(3deg);
+}
+
+/* Animaciones */
+.text-animation {
+    animation-name: slidein;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+
+    50% {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+
+}
+

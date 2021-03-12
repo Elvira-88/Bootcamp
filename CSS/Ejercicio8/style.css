@@ -1,6 +1,6 @@
 .parent {
-    gap: 5px;
     display: grid;
+    gap: 5px;
     grid-template-rows: 1fr 2fr 1fr 1fr;
     grid-template-areas: "page-title page-title"
                          "main-content masthead"
@@ -32,3 +32,4 @@
     grid-area: footer-content;
     background-color: rgb(243, 226, 204);
 }
+

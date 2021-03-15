@@ -8,19 +8,23 @@
                          "footer-content footer-content";
 }
 
+
 .parent > .page-title {
     grid-area: page-title;
     background-color: rgb(0, 153, 255);
+    
 }
 
 .parent > .main-content {
     grid-area: main-content;
     background-color: rgb(154, 137, 216);
+    color: white;
 }
 
 .parent > .masthead {
     grid-area: masthead;
     background-color: rgb(2, 2, 41);
+    color: White;
 }
 
 .parent > .sidebar {

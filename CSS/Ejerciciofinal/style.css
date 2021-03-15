@@ -1,0 +1,10 @@
+.image {
+    background-image: url(images.jpeg);
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+}
+
+.login {
+    background-color: purple;
+}

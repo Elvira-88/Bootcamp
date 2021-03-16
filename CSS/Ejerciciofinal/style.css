@@ -1,6 +1,6 @@
-/* * {
+* {
     box-sizing: border-box;
-} */
+}
 
 body {
     font-family: Helvetica, Arial;
@@ -8,8 +8,8 @@ body {
 }
 
 .parent {
-    /* width: 800px; */
-    /* height: 500px; */
+    /* width: 800px;
+    height: 500px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -18,8 +18,11 @@ body {
     border-radius: 5px;
     background-color: white;
 
-    /* margin: 15vh; */
-    /* margin: 20vw; */
+
+    margin: auto;
+    /* margin-top: 20px; */
+
+    box-shadow: 5px 5px 15px black;
 }
 
 
@@ -31,6 +34,8 @@ body {
     grid-row: 1;
     /* width: 50%; */
     /* flex: left; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .register {
@@ -38,8 +43,8 @@ body {
     /* margin-top: 20px; */
     /* margin-right: 20px; */
     grid-column: 2/3;
-    grid-auto-columns: 1;
-    padding: 30px;
+    grid-row: 1;
+    padding: 10%;
 }
 
 .login {
@@ -86,18 +91,32 @@ hr {
     color: #f4f5f7;
 }
 
-/* .email {
+input {
     width: 100%;
-} */
+    margin-bottom: 15px;    
+}
+
 
 @media only screen and (max-width: 920px) {
     .parent {
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .parent {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .image {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+
+    .register {
+        grid-column: 1;
+        grid-row: 2/3;
     }
 }

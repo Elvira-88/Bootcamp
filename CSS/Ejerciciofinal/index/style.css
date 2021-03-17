@@ -3,7 +3,7 @@
 }
 
 body {
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Helvetica, Arial;
 }
 
 img {
@@ -12,19 +12,33 @@ img {
 
 .thetop {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr;
+    padding: 10px;
 }
 
-.codespace {
-    grid: left;
-}
 
 .bell-face {
-    grid: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
-.search {
-    grid: center;
+tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
+.add {
+    background-color: #7e3af2;
+    border-radius: 5px;
+}
+
+.allpage {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-row: 1fr;
+}

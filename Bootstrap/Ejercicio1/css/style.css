@@ -1,0 +1,21 @@
+.img1 {
+  background-image: url(../images/car1.jpeg);
+  height: 50vh;  
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.img2 {
+  background-image: url(../images/car2.jpeg);
+  height: 50vh;  
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background-image: url(../images/car3.jpeg);
+  height: 50vh;  
+  background-size: cover;
+  background-position: center;
+}

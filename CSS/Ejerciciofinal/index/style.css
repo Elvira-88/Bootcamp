@@ -12,13 +12,15 @@ img {
 
 .thetop {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr;
 }
 
 .codespace {
     grid: left;
 }
 
-.face {
+.bell-face {
     grid: right;
 }
 

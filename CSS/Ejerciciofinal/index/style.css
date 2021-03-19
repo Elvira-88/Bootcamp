@@ -20,10 +20,13 @@ img {
 
 .search {
     background-color: #d9dde4;
+    border-radius: 5px;
 }
 
-.input {
-    border: none;
+.search > input {
+    border: 0;
+    background-color: #d9dde4;
+    
 }
 
 .fa-search {

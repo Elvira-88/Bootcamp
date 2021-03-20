@@ -15,18 +15,22 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-row: 1fr;
     background-color: white;
-    padding: none;
+    padding: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .search {
     background-color: #d9dde4;
     border-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .search > input {
     border: 0;
-    background-color: #d9dde4;
-    
+    background-color: #d9dde4;  
 }
 
 .fa-search {
@@ -51,7 +55,6 @@ img {
     font-size: 12px;
     gap: 15px;
     padding: 10px;
-
 }
 
 .rocket {
@@ -75,7 +78,7 @@ img {
 
 .allpage {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     grid-row: 1fr;
 }
 
@@ -90,9 +93,15 @@ img {
     margin-bottom: 15px;
 }
 
-.center {
+.center {  
+    background-color: white;
+}
+
+.dashboard {
     background-color: #f4f5f7;
-    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
 }
 
 .clients {
@@ -230,14 +239,151 @@ img {
     background-color: #def7ec;
     color: #0e9f6e;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .client1 {
     display: flex;
+    gap: 5px;
+    padding: 10px;
 }
 
 .data1 {
     flex: right;
 }
+
+.denied {
+    background-color: #fde8e8;
+    color: #e02424;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client2 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data2 {
+    flex: right;
+}
+
+.client3 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data3 {
+    flex: right;
+}
+
+.expired {
+    background-color: #dee1e6d2;
+    color: #24262d;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client4 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data4 {
+    flex: right;
+}
+
+.client5 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data5 {
+    flex: right;
+}
+
+.client6 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data6 {
+    flex: right;
+}
+
+.client7 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data7 {
+    flex: right;
+}
+
+.client8 {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.data8 {
+    flex: right;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid rgb(181, 183, 185);
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid rgb(181, 183, 185);
+}
+
+th {
+    background-color: #f4f5f7;
+    color: gray;
+    padding: 10px;
+}
+
+.cli {
+    display: flex;
+    justify-content: start;
+}
+
+.amo {
+    margin-left: 2px;    
+}
+
+@media only screen and (max-width: 920px) {
+    .boxs4 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr
+    }
+
+@media only screen and (max-width: 768px) {
+    .boxs4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: ;
+    }
+    .left {
+
+    }
+
 
 

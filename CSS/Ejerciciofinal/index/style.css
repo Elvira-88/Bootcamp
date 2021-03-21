@@ -235,7 +235,11 @@ img {
     gap: 20px;
 }
 
-.aproved {
+.total, .account, .new, .pending {
+    font-size: 13px;
+}
+
+.approved {
     background-color: #def7ec;
     color: #0e9f6e;
     border-radius: 5px;
@@ -243,6 +247,8 @@ img {
     justify-content: center;
     align-items: center;
     width: 70px;
+    font-size: 13px;
+    font-weight: 900;
 }
 
 .client1 {
@@ -255,6 +261,16 @@ img {
     flex: right;
 }
 
+.name1 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job1 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .denied {
     background-color: #fde8e8;
     color: #e02424;
@@ -263,6 +279,8 @@ img {
     justify-content: center;
     align-items: center;
     width: 70px;
+    font-size: 13px;
+    font-weight: 900;
 }
 
 .client2 {
@@ -275,6 +293,16 @@ img {
     flex: right;
 }
 
+.name2 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job2 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .client3 {
     display: flex;
     gap: 5px;
@@ -285,6 +313,16 @@ img {
     flex: right;
 }
 
+.name3 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job3 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .expired {
     background-color: #dee1e6d2;
     color: #24262d;
@@ -293,6 +331,8 @@ img {
     justify-content: center;
     align-items: center;
     width: 70px;
+    font-size: 13px;
+    font-weight: 900;
 }
 
 .client4 {
@@ -305,6 +345,16 @@ img {
     flex: right;
 }
 
+.name4 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job4 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .client5 {
     display: flex;
     gap: 5px;
@@ -313,6 +363,16 @@ img {
 
 .data5 {
     flex: right;
+}
+
+.name5 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job5 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
 }
 
 .client6 {
@@ -325,6 +385,16 @@ img {
     flex: right;
 }
 
+.name6 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job6 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .client7 {
     display: flex;
     gap: 5px;
@@ -335,6 +405,16 @@ img {
     flex: right;
 }
 
+.name7 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job7 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
+}
+
 .client8 {
     display: flex;
     gap: 5px;
@@ -343,6 +423,16 @@ img {
 
 .data8 {
     flex: right;
+}
+
+.name8 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.job8 {
+    font-size: 11px;
+    color: rgb(65, 63, 63);
 }
 
 table {
@@ -361,19 +451,15 @@ th {
     background-color: #f4f5f7;
     color: gray;
     padding: 10px;
+    font-size: 13px;
 }
 
 tr > th {
     text-align: left;
 }
 
-.cli {
-    display: flex;
-    justify-content: start;
-}
-
-.amo {
-    margin-left: 2px;    
+.money, .date {
+    font-size: 13px;
 }
 
 .final {
@@ -382,11 +468,13 @@ tr > th {
     background-color: #f4f5f7;
     border: 1px solid rgb(181, 183, 185);
     border-top: 0;
+    font-size: 13px;
 }
 
 .show {
     color: gray;
-    padding: 20px;
+    padding: 10px;
+    font-weight: 900;
 }
 
 .pagination > li {
@@ -445,7 +533,7 @@ tr > th {
 
     .final {
         flex-direction: column;
-        
+       
     }
 
     }

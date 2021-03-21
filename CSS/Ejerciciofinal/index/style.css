@@ -106,7 +106,7 @@ img {
 
 .clients {
     background-color: white;
-    width: 180px;
+    width: 100%;
     display: flex;   
     gap: 5px; 
     padding: 10px;
@@ -137,7 +137,7 @@ img {
 
 .balance {
     background-color: white;
-    width: 180px;
+    width: 100%;
     display: flex;   
     gap: 5px; 
     padding: 10px;
@@ -168,7 +168,7 @@ img {
 
 .sales {
     background-color: white;
-    width: 180px;
+    width: 100%;
     display: flex;   
     gap: 5px;
     padding: 10px; 
@@ -199,7 +199,7 @@ img {
 
 .contacts {
     background-color: white;
-    width: 180px;
+    width: 100%;
     display: flex;   
     gap: 5px; 
     padding: 10px;
@@ -232,7 +232,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
 .aproved {
@@ -242,6 +242,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70px;
 }
 
 .client1 {
@@ -261,6 +262,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70px;
 }
 
 .client2 {
@@ -290,6 +292,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70px;
 }
 
 .client4 {
@@ -360,6 +363,10 @@ th {
     padding: 10px;
 }
 
+tr > th {
+    text-align: left;
+}
+
 .cli {
     display: flex;
     justify-content: start;
@@ -367,6 +374,41 @@ th {
 
 .amo {
     margin-left: 2px;    
+}
+
+.final {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f5f7;
+    border: 1px solid rgb(181, 183, 185);
+    border-top: 0;
+}
+
+.show {
+    color: gray;
+    padding: 20px;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a {
+    color: gray; 
+    padding: 8px;  
+    text-decoration: none;
+}
+
+.pagination > li > .active {
+    background-color: #7e3af2;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination > li > a:hover:not(.active) {
+    background-color: #7e3af2;
+    color: white;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 920px) {
@@ -379,9 +421,32 @@ th {
     .boxs4 {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        width: ;
+        width: 100%;
     }
     .left {
+        display: none;
+    }
+
+    .dashboard {
+    background-color: #f4f5f7;
+    background-color: ;
+        width: 100%;
+    }
+
+    .center {
+        width: 100%;
+    }
+
+    .allpage {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 1fr;
+    }
+
+    .final {
+        flex-direction: column;
+        
+    }
 
     }
 

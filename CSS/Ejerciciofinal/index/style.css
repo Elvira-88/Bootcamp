@@ -20,6 +20,13 @@ img {
     padding-right: 10%;
 }
 
+/* .hamburguer > a {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    
+} */
+
 .search {
     background-color: #d9dde4;
     border-radius: 5px;
@@ -55,6 +62,10 @@ img {
     font-size: 12px;
     gap: 15px;
     padding: 10px;
+}
+
+.left > i:hover {
+    color: black;
 }
 
 .rocket {

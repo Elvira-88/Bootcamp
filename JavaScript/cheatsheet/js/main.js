@@ -3,7 +3,7 @@ function saludo () {
     alert("Hola desde un script externo");
     console.log("has hecho click");
 }
-document.getElementsByTagName("a").item(2).addEventListener("click", saludo)
+// document.getElementsByTagName("a").item(2).addEventListener("click", saludo)
 
 //-------------------- Depuración / logging -----------------------
 // alert("Mensaje");
@@ -152,3 +152,106 @@ person.walk();
 person.jump();
 
 console.log(typeof {}, typeof [], typeof "");
+
+//This
+const person2 = {
+    name: "Thomas",
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);
+    }
+}
+
+const person3 = {
+    name: "Sarah",
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);
+    }
+}
+
+person2.talk();
+person3.talk();
+
+console.clear();
+
+//--------------------- Arrays -----------------------
+let selectedColors = ["red", "blue"];  //Array de strings
+console.log(selectedColors, selectedColors.length, typeof selectedColors);
+
+selectedColors[2] = "green";  //Si no existe, lo crea
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.push("violet", "white"); //Añade un último elemento
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.pop();  //Elimina el último elemento
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.unshift("white"); //Añade un elemento al principio
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.shift();  //Elimina el primer elemento
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.sort();  //Para ordenar arrays
+console.log(selectedColors, selectedColors.length);
+
+console.log("El rojo está en el índice", selectedColors.indexOf("red"));
+
+console.log(selectedColors.slice(1, 3));
+console.log(selectedColors);
+
+selectedColors.splice(1, 1);  //Para eliminar un elemento
+
+console.log("Los elementos borrados son: ", selectedColors.splice(1, 2));
+console.log("El array se ha quedado así: ", selectedColors);
+
+/*
+Crear un objeto 'niño' que tenga las propiedades nombre, altura, género
+y amigos. Amigos estará inicialmente vacío y añadiremos posteriormente
+3 elementos con los nombres. Después, añadiremos uno extra al inicio.
+*/
+
+let child = {
+    name: "Pepe",
+    length: 1.20,
+    gender: "masculino",
+    friends: [],
+    loseFriend() {
+        this.friends.pop()
+    }
+}
+ console.log(child);
+
+ child.friends.push("Carmen", "Pablo", "Antonio");
+ console.log(child);
+
+ child.friends.unshift("Carlos")
+ console.log(child);
+
+ child.loseFriend();
+ console.log(child);
+
+ // ------------------------ Condicionales ------------------------
+ 
+ const randomNumber = 9;
+ const guessedNumber = "5";
+
+ if (typeof randomNumber !== typeof guessedNumber) {
+     console.log("Hey, tienes que introducir el mismo tipo.");
+ }
+
+ if (typeof guessedNumber === "string") {
+     console.log("");
+ }
+
+//  if (randomNumber === guessedNumber) {
+//      console.log("Has acertado el número");
+
+//  } else if (randomNumber > guessedNumber) {
+//      console.log("El número secreto es mayor");
+    
+// } else {
+//      console.log("El número secreto es mrnod"); 
+// }

@@ -18,14 +18,20 @@ img {
     padding: 15px;
     padding-left: 10%;
     padding-right: 10%;
+    flex: right;
 }
 
-/* .hamburguer > a {
+.head {
+    display: flex;
+}
+
+.hamburguer > a {
     display: inline-block;
     width: 30px;
     height: 20px;
-    
-} */
+    flex: left;  
+    background-color: #7e3af2;
+}
 
 .search {
     background-color: #d9dde4;

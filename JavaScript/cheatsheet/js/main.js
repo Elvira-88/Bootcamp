@@ -389,4 +389,80 @@ numbersArray.forEach(function (value, index) {
     console.log(`Índice ${index}: ${value}`);
 });
 
+numbersArray.forEach((value, index) => console.log(`Índice ${index}: ${value}`));
 
+let otherArray = [];
+
+numbersArray.forEach(item => otherArray.push(item));
+
+console.log(otherArray);
+
+//For of
+for (let item of numbersArray) {
+    console.log(item);
+}
+
+//Continue
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue   //Salta a la siguiente iteración
+    }
+    console.log("Using continue", i);
+}
+
+//Break
+let i = 0;
+let k;
+mainLoop: while (true) {
+    console.log("Outer loop", i);
+    i++;
+    k = 1;
+    while (true) {
+        console.log("Inner loop", k);
+        k++;
+        if (i === 5 && k === 5) {
+            break mainLoop;
+        } else if (k === 5) {
+            break;
+        }
+    }
+}
+
+
+// ----------------------- DOM (Document Object Model) ------------------------
+// Basics
+console.log(document);
+console.log(document.domain);
+console.log(document.URL);
+// document.title = "Cheatsheet JavaScript (DOM)";
+document.title += "(DOM)";
+console.log(document.title);
+
+console.clear();
+// Selectors
+const family = document.getElementsByTagName("div");
+console.log(family);
+
+const grandParent = document.getElementById("grandparent");
+console.log(grandParent);
+
+const parents = document.getElementsByClassName("parent");
+const parent1 = parents[0];
+const parent2 = parents[1];
+
+console.log(parent1, parent2);
+
+const children = document.getElementsByClassName ("child");
+console.log(children);
+
+let element = document.querySelector("grandparent div");
+console.log(element);
+
+parent1.style.backgroundColor = "#333";
+
+
+
+// Array.from(family).forEach(item => console.log(item);)  //Construyo un array desde HTML Collection
+// for (let familyMember of family) {
+//     console.log(familyMember);
+// }

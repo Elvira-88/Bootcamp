@@ -460,6 +460,76 @@ console.log(element);
 
 parent1.style.backgroundColor = "#333";
 
+children[0].parentNode.style.backgroundColor = "#666";
+
+const changeBackground = (element, color) => element.style.backgroundColor = color;
+
+// changeBackground(children[0], "#333");
+// changeBackground(parent1, "red");
+// changeBackground(parent2.children[1], "blue");
+// changeBackground(children[0].parentNode.parentNode, "#ddd");
+
+// changeBackground(parent1.children[1].previousElementSibling, "red")
+
+// changeBackground(grandParent.children[1].previousElementSibling.lastElementChild, "green");
+
+// Properties
+// children[0].innerHTML = "Child 1 v2";
+console.log(children[0].innerHTML);
+console.log(children[0].textContent);   //Ignora etiquetas
+// children[0].textContent += "v2";
+
+console.clear();
+
+console.log("Classlist: ", parent1.classList);
+parent1.classList.remove("bg-dark");
+parent1.classList.add("bg-red");
+console.log("Classlist: ", parent1.classList);
+
+parent1.classList.toggle("bg-red");
+// toogle: Alterna la clase, si no está, la incluye, si está, la elimina
+
+parent1.setAttribute("class", "nombre-parent1");
+
+console.clear();
+// Create / Remove elements
+let myDiv = document.createElement("div");
+myDiv.id = "new-Div";
+myDiv.classList.add("child");
+myDiv.textContent = "child 2.5";
+
+let myDiv2 = myDiv;
+
+parent2.appendChild(myDiv2);
+parent1.appendChild(myDiv);   //Mismo nodo con dos nombres diferentes
+
+myDiv2 = myDiv2.cloneNode(true);  //Creamos un nuevo nodo a partir del original
+parent2.appendChild(myDiv2);
+myDiv2.textContent = "Child 5"
+
+myDiv2.remove();
+
+let myDiv3 = myDiv.cloneNode();
+parent2.before(myDiv3);
+parent2.after(myDiv.cloneNode());
+
+//Crear una función que me devuelva un nodo nuevo y que reciba etiqueta e ID
+
+function createNode(label, id) {
+    let newNode = document.createElement(label);
+
+    newNode.id = id;
+
+    return newNode;
+}
+
+let newDiv = createNode("div", "identificador1");
+let table = createNode("table", "identificador2");
+
+parent2.appendChild(newDiv);
+parent2.appendChild(table);
+
+
 
 
 // Array.from(family).forEach(item => console.log(item);)  //Construyo un array desde HTML Collection

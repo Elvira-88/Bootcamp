@@ -18,6 +18,7 @@
             gap: 25px;
             padding: 25px;
             flex-grow: 1;
+            flex-wrap: wrap;
         }
 
         .parent {
@@ -30,6 +31,11 @@
 
         .bg-red {
             background-color: red;
+        }
+
+        .button {
+            border: 3px solid gray;
+            height: 100px;
         }
 
     </style>
@@ -53,6 +59,18 @@
             <div class="child" id="child4">Child 2</div>
         </div>
     </div>
+
+    <h1>Eventos</h1>
+    <div class="button" id="container">
+        <button>Cambiar de color</button>
+    </div>
+    
+    <label for="emailInput">introduce tu email</label>
+    <input type="email" id="emailInput">
+
+    <h1>Coords</h1>
+
+    <div style="height: 1000px;"></div>
     
 
     <script>

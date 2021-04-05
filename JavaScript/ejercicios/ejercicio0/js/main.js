@@ -231,10 +231,10 @@ trastornos.forEach((item, index) => console.log(`index ${index}: ${item}`));
 
 //18. Crea una función que reciba un string y un número N y devuelva el string original repetido N veces.
 
-function repeatString(str) {
-    return str.repeat(2);
+function repeatString(str, n) {
+    return str.repeat(n);
 }
-console.log(repeatString("No haré memes sobre el profesor "));
+console.log(repeatString("No haré memes sobre el profesor ", 3));
 
 //19. Crea una función que recibe un objeto con dos campos, votos positivos y votos negativos y que devuelva
 //la cuenta final.
@@ -313,6 +313,25 @@ console.log(arrayFiltered);
 //todas sus propiedades. La segunda devolverá un array con los valores de dichas propiedades.
 //Investigar los métodos keys y values del prototipo de Object.
 
+function figuras1(obj) {
+    const object1 = {
+        color: "blanco",
+        forma: "círculo",
+    };
+    return Object.keys(object1);
+};
+
+console.log(figuras1());
+
+function figuras2(obj) {
+    const object2 = {
+        color: "negro",
+        forma: "cuadrado",
+    };
+    return Object.values(object2);
+};
+
+console.log(figuras2());
 
 
 //26. Crea una función que invierta un string.
@@ -321,6 +340,29 @@ function stringReverse(str) {
     return str.split("").reverse().join("");
 }
  
-console.log(stringReverse("No abusaré del café en las tardes de programación."));
+console.log(stringReverse(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"));
 
-//Crea una función que compare strings sin tener en cuenta las mayúsculas
+//27. Crea una función que compare strings sin tener en cuenta las mayúsculas/minúsculas.
+
+function compareStrings(str1, str2) {
+    return str1.toUpperCase() === str2.toUpperCase();
+}
+
+console.log(compareStrings("Darth CODER", "darth coder"));
+console.log(compareStrings("Hola", "adiós"));
+
+//28. Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado.
+//El apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string.
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+console.log(capitalize("comprobaré"));
+
+//29. Crea una función en una única línea que reciba un valor lógico y devuelva el opuesto.
+
+const logicalValue = (Boolean) => !Boolean;
+
+console.log(logicalValue(true));
+console.log(logicalValue(false));

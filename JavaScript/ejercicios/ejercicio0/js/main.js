@@ -79,7 +79,12 @@ console.log(age(30));
 //8. Crea una función que reciba un array y devuelva su último elemento. Prueba tu función con varios
 //arrays de diferentes longitudes.
 
+function myarray(array) {
+    return array[array.length-1];
+};
 
+console.log(myarray([1,2,3]));
+console.log(myarray([1,2]));
 
 //9. Un granjero necesita contar la cantidad de patas de los animales en sus diferentes granjas muy frecuentemente,
 //pero tiene tres especies: pollos(2 patas), vacas (4 patas) y cerdos (4 patas). Tu función recibirá la cantidad
@@ -108,7 +113,7 @@ function myfunction(argument1, argument2) {
 myfunction(1, 2);
 myfunction(3, true);
 
-//Crea una función que reciba un string con una frase y devuelva un array donde cada elemento será una
+//11. Crea una función que reciba un string con una frase y devuelva un array donde cada elemento será una
 //palabra de la frase original. Investigar método existente de los strings para este fin.
 
 function phrase(words) {
@@ -118,7 +123,7 @@ function phrase(words) {
 console.log(phrase("Hola, buenos días"));
 
 
-//Inicializa dos objetos, address1 y address2 con las propiedades: provincia, ciudad, municipio, código
+//12. Inicializa dos objetos, address1 y address2 con las propiedades: provincia, ciudad, municipio, código
 //postal, calle, número, planta y número de puerta.
 
 let address1 = {
@@ -134,30 +139,33 @@ let address1 = {
 
 console.log(address1);
 
-// let address2 = {
-//     provincia: "Málaga",
-//     ciudad: "Málaga",
-//     municipio: "",
-//     código_postal: 23009,
-//     calle: "Luchana",
-//     número: 7,
-//     planta: 3,
-//     número_puerta: 2,
-// };
+let address2 = {
+    provincia: "Málaga",
+    ciudad: "Málaga",
+    municipio: "",
+    código_postal: 23009,
+    calle: "Luchana",
+    número: 7,
+    planta: 3,
+    número_puerta: 2,
+};
 
-// console.log(adress2);
+console.log(address2);
 
 //13. Los dominios en la web, se componen del nombre del dominio (codespaceacademy) y de un TLD (top- level domain)
 //como, por ejemplo .com/ .es/ .org, etc. Crea una función que se llame parseDomain() que reciba por argumento
 //un string y devuelva un objeto con dos propiedades: domain y tld. 
 
-function parseDomain(str) {
-    console.log(str.substring(0, 16));
-    console.log(str.substring(17, 20));
-}
+const parseDomain = function (x) {
+    const array = x.split(".");
+    const object = {
+        Domain: array[0],
+        TLD: array[1],
+    }
+    return object;    
+};
 
-parseDomain("codespaceacademy.com");
-
+console.log(parseDomain("codespaceacademy.com"));
 
 //14. Nos han prohibido el uso del operador de igualdad estricta (===), pero queremos poder seguir utilizando dicha
 //funcionallidad. Crea una función que devuelva true si dos números tienen el mismo valor y el mismo tipo de dato.
@@ -192,14 +200,34 @@ console.log(samelength("Adiós", "Mundo"));
 //16. Crea una función que reciba un string y determine si está vacío sin utilizar la propiedad length.
 
 function empty(str) {
-    console.log(str === "");
-}
+    return str === "";
+};
+
+console.log(empty(""));
+console.log(empty());
+console.log(empty("Something"));
 
 //17. Imprimir elemento a elemento el array del apartado 1 de cuatro formas diferentes: 
 //while, for, for of, forEach.
 
 // let trastornos = ["ansioso", "depresivo", "bipolar", "de la personalidad", "por estrés postraumático"];
 // console.log(trastornos);
+
+let e = 0;
+while (e < trastornos.length) {
+    console.log(`Índice ${e}: ${trastornos[e]}`);
+    e++;
+};
+
+for (let e = 0; e < trastornos.length; e++){
+    console.log(`Index ${e}: ${trastornos[e]}`);
+};
+
+for(let trastorno of trastornos) {
+    console.log(trastorno);
+};
+
+trastornos.forEach((item, index) => console.log(`index ${index}: ${item}`));
 
 //18. Crea una función que reciba un string y un número N y devuelva el string original repetido N veces.
 
@@ -211,29 +239,48 @@ console.log(repeatString("No haré memes sobre el profesor "));
 //19. Crea una función que recibe un objeto con dos campos, votos positivos y votos negativos y que devuelva
 //la cuenta final.
 
-getVoteCount = (upVotes, downVotes) => upVotes - downVotes;
-
-console.log(getVoteCount(35, 15));
+const getVoteCount = function (obj) {
+    return obj.upVotes - obj.downVotes;
+    }
+    
+    // const votes = {upVotes: 35, downVotes: 15};
+    // console.log(getVoteCount(votes));
+    console.log(getVoteCount({upVotes: 35, downVotes: 15}));
 
 //20. Crea una función que recibe un array de dos tipos de datos mezclados y que devuelva otro array con el tipo 
 //de cada uno de los elementos.
 
-getTypes = (array) => typeof array;
+function getTypes(array) {
+    const arrayTypes = [];
 
-// function getTypes([array]) {
-//     return typeof array;
-// }
+    array.forEach(element => {
+        arrayTypes.push(typeof element);
+    });
+    
+    return arrayTypes;
+};
 
 console.log(getTypes(["I'm learning JS in a Bootcamp", 7.5, {}, 0, undefined, [], "codespace"]));
 
 //21. Función que dado un array de números con formato string devuelva un array con los números
 //ya parseados.
 
+function getParsedNumbers(array) {
+    const parsedArray = [];
+
+    array.forEach(element => {
+        parsedArray.push(Number(element));
+    });
+    
+    return parsedArray;
+};
+
+console.log(getParsedNumbers(["1.5", "10", "0"]));
 
 //22. Crea una función de flecha que devuelva "Positivo" si el número que recibe por argumento es mayor o igual
 //que cero y "Negativo" en caso contrario. Usa el operador ternario.
 
-positiveOrNegative = (num) => num >= 0 ? "positive" : "negative";
+positiveOrNegative = num => num >= 0 ? "Positive" : "Negative";
 
 console.log(positiveOrNegative(2));
 console.log(positiveOrNegative(-1));
@@ -241,16 +288,39 @@ console.log(positiveOrNegative(0));
 
 //23. Crea una función que dado un array cualquiera y un índice, borre el elemento guardado en ese índice.
 
+const removeItem = (array, index) => array.splice(index,1);
 
-array = [];
+console.log(removeItem([1, 2, 3, 4], 0));
 
-for (let i = 0; i <= 10; i++) {
-    array.push(i);
+//24. Usando la función del apartado anterior, crea otra función que dado un array de números y un
+//número a filtrar, devuelva un array borrando todas las apariciones de dicho número.
+
+const filterItem = (array, numberToFilter) => {
+    
+    array.forEach((element, index) => {
+
+        if (element === numberToFilter) {
+            removeItem(array, index);
+        }
+
+    });
 }
+const arrayFiltered = [1, 5, 6, 7, 5];
+filterItem(arrayFiltered, 5);
+console.log(arrayFiltered);
 
-console.log(array);
+//25. Crea dos funciones que recibirán un objeto, la primera devolverá un array con los nombres de
+//todas sus propiedades. La segunda devolverá un array con los valores de dichas propiedades.
+//Investigar los métodos keys y values del prototipo de Object.
 
-array.splice(1,1);
-console.log(array);
 
-//24. 
+
+//26. Crea una función que invierta un string.
+
+function stringReverse(str) {
+    return str.split("").reverse().join("");
+}
+ 
+console.log(stringReverse("No abusaré del café en las tardes de programación."));
+
+//Crea una función que compare strings sin tener en cuenta las mayúsculas

@@ -313,25 +313,27 @@ console.log(arrayFiltered);
 //todas sus propiedades. La segunda devolverá un array con los valores de dichas propiedades.
 //Investigar los métodos keys y values del prototipo de Object.
 
-function figuras1(obj) {
-    const object1 = {
-        color: "blanco",
-        forma: "círculo",
-    };
+function figuras1(object1) {
     return Object.keys(object1);
 };
 
-console.log(figuras1());
+const object1 = {
+    color: "blanco",
+    forma: "círculo",
+};
+
+console.log(figuras1(object1));
 
 function figuras2(obj) {
-    const object2 = {
-        color: "negro",
-        forma: "cuadrado",
-    };
     return Object.values(object2);
 };
 
-console.log(figuras2());
+const object2 = {
+    color: "negro",
+    forma: "cuadrado",
+};
+
+console.log(figuras2(object2));
 
 
 //26. Crea una función que invierta un string.

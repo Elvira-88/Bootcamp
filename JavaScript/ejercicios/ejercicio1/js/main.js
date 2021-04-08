@@ -24,22 +24,30 @@ colorPage.addEventListener("click", function () {
 //Partimos de un HTML con una lista de 3 URLs (texto) de imágenes y un element img. 
 //Al hacer click en cada URL, cambiará la imagen a la que contenga dicha URL.
 
-const listItems = document.getElementsByTagName("li");
-const image = document.querySelector("img");
+// const listItems = document.getElementsByTagName("li");
+// const image = document.querySelector("img");
 
-const changeImage = (e) => image.src = e.target.textContent;
+// function changeImage(e) {
+//         image.src = e.target.textContent;    
+// };
 
-listItems[0].addEventListener("click", changeImage);
-listItems[1].addEventListener("click", changeImage);
-listItems[2].addEventListener("click", changeImage);
+// const changeImage = (e) => image.src = e.target.textContent;
+
+// listItems[0].addEventListener("click", changeImage);
+// listItems[1].addEventListener("click", changeImage);
+// listItems[2].addEventListener("click", changeImage);
 
 // v2 - Autoría Juan Alberto
-// const list = document.querySelector("ul");
-// const image = document.querySelector("img");
+const list = document.querySelector("ul");
+const image = document.querySelector("img");
 
 // const changeImage = e => image.src = e.target.textContent;
 
-// list.addEventListener("click", changeImage);
+// list.addEventListener("click", function changeImage(e) {
+//         image.src = e.target.textContent;
+// });
+
+list.addEventListener("click", (e) => image.src = e.target.textContent);
 
 //Apartado 4
 //Añadir un input de tipo texto y un botón. Al pulsar el botón debe escribirse el texto del input
@@ -49,10 +57,7 @@ const ap4Paragraph = document.getElementById("fillableParagraph");
 const ap4Input = document.querySelector("input");
 const ap4Button = document.querySelectorAll("button")[1];
 
-ap4Button.addEventListener("click",() => {
-        ap4Paragraph.textContent = ap4Input.value;
-        ap4Input.value = "";
-});
+ap4Button.addEventListener("click",() => ap4Paragraph.textContent = ap4Input.value);
 
 //4.2. Añadir un nuevo input pero esta vez cambiará el texto con cada pulsación de tecla del usuario.
 
@@ -142,7 +147,7 @@ document.getElementById("randomButton").onclick = () => {
 //haremos “toggle” o alternaremos esa clase, es decir, si está presente la quitaremos y si no está, 
 //la añadiremos.
 
-// document.querySelector("#toggler").onclick = (e) => e.target.classList.toogle("btn");
+document.querySelector("#toggler").onclick = (e) => e.target.classList.toggle("btn");
 
 //13.
 

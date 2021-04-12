@@ -57,7 +57,10 @@ const ap4Paragraph = document.getElementById("fillableParagraph");
 const ap4Input = document.querySelector("input");
 const ap4Button = document.querySelectorAll("button")[1];
 
-ap4Button.addEventListener("click",() => ap4Paragraph.textContent = ap4Input.value);
+ap4Button.addEventListener("click",() => {
+       ap4Paragraph.textContent = ap4Input.value;
+       ap4Input.value = "";
+});
 
 //4.2. Añadir un nuevo input pero esta vez cambiará el texto con cada pulsación de tecla del usuario.
 
@@ -84,8 +87,9 @@ textarea.addEventListener("input", e => {
 //rojo. Para revertir el estado de una propiedad, podemos utilizar el valor "revert" o dejarlo vacío.
 
 const evenInput = document.querySelector("#evenNumberInput");
-evenInput.nextElementSibling.addEventListener("click", () => {
-        if (evenInput.value % 2 === 0) {
+const evenButton = document.getElementById("evenButton")
+evenButton.addEventListener("click", () => {
+        if (evenInput.value % 2 !== 0) {
                 evenInput.style.border = "2px solid red";
         } else {
                 evenInput.style.border = "";
@@ -121,13 +125,13 @@ document.querySelector("#colorsSelect").addEventListener("change", e => {
 //10. Incluir un botón que al pulsarlo genere un número aleatorio y mantenga en una lista actualizada el
 //número de elementos que se han generado, los que son pares y los que son impares.
 
-const num = document.getElementById("currentRandom");
+const currentRandom = document.getElementById("currentRandom");
 const totalNumbers = document.getElementById("totalNumbers");
 const oddNumbers = document.getElementById("oddNumbers");
 const evenNumbers = document.getElementById("evenNumbers");
 
 document.getElementById("randomButton").onclick = () => {
-        const randomNumber =Math.floor(Math.random() * 100);
+        const randomNumber = Math.floor(Math.random() * 100);
         currentRandom.textContent = randomNumber;
 
         // totalNumbers.textContent = Number(totalNumbers.textContent) + 1;
@@ -141,6 +145,34 @@ document.getElementById("randomButton").onclick = () => {
 //Al pulsar el botón, si el número ya existe en la lista, mostrar un mensaje de error, si no existe,
 //lo añadirá al principio.
 
+const ulAptll = document.getElementById("ulAptll");
+const inputAptll = document.getElementById("inputAptll");
+const buttonAptll = document.getElementById("buttonAptll");
+let numberList = [13, 27, 54, 86];
+
+function fillList() {
+        ulAptll.innerHTML = "";
+        for (let number of numberList) {
+                newLi = document.createElement("li");
+                newLi.textContent = number;
+                ulAptll.appendChild(newLi);
+        }
+};
+
+console.log(fillList());
+
+function addToList() {
+        let numberToJoin = Number(inputAptll.value);
+        if (numberList.indexOf(numberToJoin) === -1) {
+                numberList.push(numberToJoin);
+                fillList();
+        } else {
+                window.alert("Este número ya está en la lista");
+        }
+};
+
+fillList();
+buttonAptll.addEventListener("click", addToList);
 
 
 //12. Crearemos una clase .btn en CSS que le de ciertos estilos a un botón. Al hacer click en el botón
@@ -149,5 +181,6 @@ document.getElementById("randomButton").onclick = () => {
 
 document.querySelector("#toggler").onclick = (e) => e.target.classList.toggle("btn");
 
-//13.
+
+
 

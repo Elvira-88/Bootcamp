@@ -181,6 +181,34 @@ buttonAptll.addEventListener("click", addToList);
 
 document.querySelector("#toggler").onclick = (e) => e.target.classList.toggle("btn");
 
+//13. El código siguiente, añade un eventListener a cada botón para que cuando se haga click en cada uno de 
+//ellos, le cambie el backgroundColor.
+//Refactorizar el código para hacerlo con un único forEach.
+//Nota: 
+//1. Para transformar un HTMLCollection a un array, podemos hacer: Array.from(HTMLCollection);
+//2. Para acceder al elemento que “disparó” el evento, podemos usar evento.target.
+
+const buttons = document.getElementsByClassName("btn-red");  //Devuelve HTMLCollection
+
+// buttons[0].addEventListener("click", () => {
+//     buttons[0].style.backgroundColor = "red";
+// });
+
+// buttons[1].addEventListener("click", () => {
+//     buttons[1].style.backgroundColor = "red";
+// });
+
+// buttons[2].addEventListener("click", () => {
+//     buttons[2].style.backgroundColor = "red";
+// });
+
+Array.from(buttons).forEach(button => {
+        button.addEventListener("click", function (e) {
+              e.target.style.backgroundColor = "red";   
+        });      
+});
+
+
 
 
 

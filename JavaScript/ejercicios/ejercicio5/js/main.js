@@ -1,9 +1,11 @@
-function Book(id, titulo, autor, ventas, precio) {
-    this.id = id;
-    this.titulo = titulo;
-    this.autor = autor;
-    this.ventas = ventas;
-    this.precio = precio;
+class Book {
+    constructor(id, titulo, autor, ventas, precio) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ventas = ventas;
+        this.precio = precio;
+    }
 };
 
 let books = [
@@ -19,6 +21,8 @@ let books = [
     new Book(10, "Divinas Palabras","Ramón María del Valle-Inclán",936540, 22),
 ];
 
+let displayedBooks = Array.from(books);  // [...books]
+
 const booksTbody = document.querySelector("#tablebody");
 
 const titleInput = document.getElementById("titleInput");
@@ -27,11 +31,13 @@ const salesInput = document.getElementById("salesInput");
 const priceInput = document.getElementById("priceInput");
 const addBookButton = document.getElementById("addBookButton");
 
+const tfoot = document.querySelector("tfoot");
+
 function updateTable() {
     booksTbody.innerHTML = "";  //Vacía el tbody por completo
 
     //Generamos de nuevo todas las filas
-    books.forEach(book => {
+    displayedBooks.forEach(book => {
         booksTbody.innerHTML += `
         <tr>
             <td>${book.id}</td>
@@ -45,11 +51,15 @@ function updateTable() {
         </tr>`;
          
     });
+
+    const totalPrice = displayedBooks.reduce((priceSum, book) => priceSum + book.precio, 0);
+    tfoot.textContent = `Precio total ${totalPrice}`;
 };
 
 booksTbody.onclick = e => {
     if(e.target.tagName === "BUTTON") {
         books = books.filter(book => book.id != e.target.id);
+        displayedBooks = displayedBooks.filter(book => book.id != e.target.id);
         updateTable();
     }
 }; 
@@ -61,14 +71,16 @@ addBookButton.addEventListener("click", e => {
 
     const newId = books[books.length-1].id + 1;
 
-    books.push(new Book(
+    const newBook = new Book(
         newId,
         titleInput.value,
         authorInput.value,
         salesInput.value,
-        priceInput.value)
-
-    );
+        Number(priceInput.value));
+    
+    books.push(newBook);
+    displayedBooks.push(newBook);
+    
 
     updateTable();
 
@@ -80,4 +92,45 @@ addBookButton.addEventListener("click", e => {
     addBookButton.parentNode.reset();
 
 });
+
+
+// Ejercicio 5
+
+
+const filterInput = document.querySelector("#filterInput");
+const priceHeader = document.querySelector("#priceHeader");
+
+let ascendingOrder = true;
+
+//Apartado 1
+filterInput.addEventListener("input", e => {
+    //Teniendo en cuenta las mayúsculas (case sensitive)
+    displayedBooks = books.filter(book => book.titulo.includes(e.target.value));
+
+    //Sin tener en cuenta las mayúsculas
+    displayedBooks = books.filter(book => {
+        const upperTitle = book.titulo.toUpperCase();
+        const upperInputValue = e.target.value.toUpperCase();
+        
+        return upperTitle.includes(upperInputValue);
+    });
+
+    updateTable();
+});
+
+//Apartado 2
+priceHeader.style.cursor = "pointer";
+priceHeader.addEventListener("click", e => {
+    ascendingOrder = !ascendingOrder;
+
+    displayedBooks.sort((book1, book2) => {
+        return ascendingOrder   ? book1.precio - book2.precio
+                                : book2.precio - book1.precio;
+    });
+
+    updateTable();
+
+});
+
+//Apartado 3
 

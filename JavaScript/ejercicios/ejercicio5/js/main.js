@@ -105,14 +105,17 @@ let ascendingOrder = true;
 //Apartado 1
 filterInput.addEventListener("input", e => {
     //Teniendo en cuenta las mayúsculas (case sensitive)
-    displayedBooks = books.filter(book => book.titulo.includes(e.target.value));
+    // displayedBooks = books.filter(book => book.titulo.includes(e.target.value));
 
     //Sin tener en cuenta las mayúsculas
     displayedBooks = books.filter(book => {
-        const upperTitle = book.titulo.toUpperCase();
-        const upperInputValue = e.target.value.toUpperCase();
+        // const upperTitle = book.titulo.toUpperCase();
+        // const upperInputValue = e.target.value.toUpperCase();
         
-        return upperTitle.includes(upperInputValue);
+        // return upperTitle.includes(upperInputValue);
+
+        return book.title.toUpperCase().includes(e.target.value.toUpperCase());
+
     });
 
     updateTable();
@@ -132,5 +135,4 @@ priceHeader.addEventListener("click", e => {
 
 });
 
-//Apartado 3
 

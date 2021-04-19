@@ -41,7 +41,7 @@ users.forEach(user => {
     select.appendChild(newOption);
 });
 
-// Rellenar la lista con la info deun usuario
+// Rellenar la lista con la info de un usuario
 function fillList(user) {
 
     list.innerHTML = "";

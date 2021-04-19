@@ -49,7 +49,7 @@ function updateTable() {
 
 booksTbody.onclick = e => {
     if(e.target.tagName === "BUTTON") {
-        books = books.filter(book => book.id != e.target.id);
+        books = books.filter(book => book.id == e.target.id);
         updateTable();
     }
 }; 

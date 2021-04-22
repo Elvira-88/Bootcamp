@@ -1,29 +1,19 @@
-export default function Schedule({category, contact}) {
+export default function Schedule({contacts}) {
     return (
-        <>                             
-            <ul>
-               {contact.map(({category, name, lastName, address, city, postalCode, phone}) => {
-               return (<li>{category}</li>)
-                      (<li>{name}</li>)
-                      (<li>{lastName}</li>)
-                      (<li key={phone}>{phone}</li>)
-                      (<li>{address}, {postalCode}, {city}</li>)
-                      
-               })}                     
-           </ul>  
-        </>
-     )
+        <div className="row">
+            {contacts.map((contact, index) => {
+                return (
+                    <ul className="list-group mb-3 col-12 col-sm-6 col-xl-3" key={contact.phone}>
+                        <li className="list-group-item active">Contacto {index + 1}</li>
+                        <li className="list-group-item">{contact.name}</li>
+                        <li className="list-group-item">{contact.lastName}</li>
+                        <li className="list-group-item">{contact.phone}</li>
+                        <li className="list-group-item">{contact.address}, {contact.postalCode}, {contact.city}</li>
+                    </ul>
+                )
+            })}
+        </div>
+    )
 }
 
-// export default function List({category, products}) {
-//     return (
-//         <>                             
-//            <h2>{category}</h2>
-//            <ol>
-//                {products.map(({id, name, brand, model, price}) => {
-//                return (<li key={id}>{name} {brand} {model}. Precio: {price}€</li>)
-//                })}                     
-//            </ol>  
-//         </>
-//      )
-// }
+

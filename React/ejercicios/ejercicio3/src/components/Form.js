@@ -58,12 +58,12 @@ export default function Form({setContacts}) {
         // const newContact = {name, lastName, address, postalCode, city, phone};
 
          const newContact = {
-            name: name,
-            lastName: lastName,
-            address: address,
-            postalCode: postalCode,
-            city: city,
-            phone: phone
+            name:  form.name,
+            lastName:  form.lastName,
+            address:  form.address,
+            postalCode:  form.postalCode,
+            city:  form.city,
+            phone:  form.phone
         };
 
         setContacts(currentContacts => [...currentContacts, newContact]);

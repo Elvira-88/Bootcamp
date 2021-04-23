@@ -9,6 +9,9 @@ export default function Schedule({contacts}) {
                         <li className="list-group-item">{contact.lastName}</li>
                         <li className="list-group-item">{contact.phone}</li>
                         <li className="list-group-item">{contact.address}, {contact.postalCode}, {contact.city}</li>
+                       {/*  <li>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </li> */}
                     </ul>
                 )
             })}

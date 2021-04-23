@@ -16,7 +16,7 @@ export default function Counter() {
 
     return (
         <div>
-            <FirstComponent count={coun}/>
+            <FirstComponent count={count}/>
             <p>Has hecho click {count} veces.</p>
             <button onClick={handleClick}>Hazme click</button>
             <button onClick={() => count > 0 && setCount(count - 1)}>Bajar</button>

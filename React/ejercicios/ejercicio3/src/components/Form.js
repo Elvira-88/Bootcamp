@@ -80,12 +80,12 @@ export default function Form({setContacts}) {
 
     return (
         <form className="form-group" onSubmit={submit}>
-            <input id="name"         onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce un nombre"/>
-            <input id="lastName"     onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce los apellidos"/>
-            <input id="phone"        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce un nombre"/>
-            <input id="address"      onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la dirección"/>
-            <input id="postalCode"   onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el código postal"/>
-            <input id="city"         onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el número de teléfono"/>
+            <input id="name"        value={form.name}        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce un nombre"/>
+            <input id="lastName"    value={form.lastName}    onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce los apellidos"/>
+            <input id="phone"       value={form.phone}       onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce un nombre"/>
+            <input id="address"     value={form.address}     onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la dirección"/>
+            <input id="postalCode"  value={form.postalCode}  onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el código postal"/>
+            <input id="city"        value={form.city}        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el número de teléfono"/>
             <input type="submit" class="btn btn-success" value="Registrar"/>
         </form>
     )

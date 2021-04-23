@@ -1,4 +1,11 @@
-export default function Schedule({contacts}) {
+export default function Schedule({contacts, setContacts}) {
+
+    const removeContact = (phone) => {
+        return e => {
+            setContacts(contacts.filter(contact => contact.phone !== phone))
+        }
+    }
+    
     return (
         <div className="row">
             {contacts.map((contact, index) => {
@@ -9,9 +16,9 @@ export default function Schedule({contacts}) {
                         <li className="list-group-item">{contact.lastName}</li>
                         <li className="list-group-item">{contact.phone}</li>
                         <li className="list-group-item">{contact.address}, {contact.postalCode}, {contact.city}</li>
-                       {/*  <li>
-                            <button type="button" class="btn btn-warning">Eliminar</button>
-                        </li> */}
+                        <li className="list-group-item">
+                            <button className="btn btn-warning" onClick={removeContact(contact.phone)}>Eliminar</button>
+                        </li>
                     </ul>
                 )
             })}

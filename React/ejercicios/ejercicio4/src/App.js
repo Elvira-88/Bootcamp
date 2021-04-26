@@ -14,14 +14,14 @@ function App() {
 
     fetch(URL)
     .then(response => response.json())
-    .then(data => setToDo(data.splice(0, 20)))    
+    .then(data => setToDo(data.slice(0, 20)))    
   },[])
   
   return (
     <div className="container">
       <h2 className="my-4">Todo List</h2>
-      <List tasks={toDo}/>
-      <Input/>            
+      <Input/> 
+      <List tasks={toDo} setTasks={setToDo}/>               
     </div>
   );
 }

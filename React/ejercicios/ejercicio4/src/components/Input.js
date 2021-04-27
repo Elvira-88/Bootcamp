@@ -24,3 +24,4 @@ export default function Input({setTasks}) {
        </form>
     )
 }
+

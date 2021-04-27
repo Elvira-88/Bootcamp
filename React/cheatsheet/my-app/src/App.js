@@ -6,6 +6,7 @@ import UseEffectComponent from './components/UseEffectComponent';
 import UseContextComponent from "./components/UseContextComponent";
 
 import { useState, createContext } from 'react';
+import Router from "./Router";
 
 export const GlobalContext = createContext();
 
@@ -26,9 +27,11 @@ function App() {
       <SecondComponent/> 
       <ThirdComponent/>         */}
 
-      <GlobalContext.Provider value="Soy un string guardado en un contexto">
+      {/* <GlobalContext.Provider value="Soy un string guardado en un contexto">
         <UseContextComponent/>
-      </GlobalContext.Provider>
+      </GlobalContext.Provider> */}
+
+      <Router/>
       
     </div>
   );

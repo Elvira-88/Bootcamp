@@ -1,27 +1,27 @@
 import {useState, useEffect} from "react";
 
 import './App.css';
-import List from "./components/List"
-import Input from "./components/Input"
+import NewTodo from "./components/NewTodo"
+import TodoList from "./components/TodoList"
 
 function App() {
 
-  const [toDo, setToDo] = useState([]);
+  const [todos, setToDos] = useState([]);
 
   useEffect(() => {
 
-    const URL = "https://raw.githubusercontent.com/BC-FSWD/todo-list/master/todo-list.json";
+    const API_TODOS = "https://raw.githubusercontent.com/BC-FSWD/todo-list/master/todo-list.json";
 
-    fetch(URL)
+    fetch(API_TODOS)
     .then(response => response.json())
-    .then(data => setToDo(data.slice(0, 20)))    
+    .then(data => setToDos(data.slice(0, 20)))    
   },[])
   
   return (
     <div className="container">
       <h2 className="my-4">Todo List</h2>
-      <Input/> 
-      <List tasks={toDo} setTasks={setToDo}/>               
+      <TodoList todos={todos} setTodos={setToDos}/> 
+      <NewTodo/>               
     </div>
   );
 }

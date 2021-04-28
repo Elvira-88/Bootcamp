@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function Input({setTasks}) {
+export default function NewTodo({}) {
 
     const [newTask, setNewTask] = useState("");
 

@@ -1,10 +1,9 @@
 import {useState, useEffect} from "react";
 
-import './App.css';
-import NewTodo from "./components/NewTodo"
-import TodoList from "./components/TodoList"
+import NewTodo from "../components/NewTodo"
+import TodoList from "../components/TodoList"
 
-function App() {
+function App4() {
 
   const [todos, setToDos] = useState([]);
 
@@ -26,6 +25,6 @@ function App() {
   );
 }
 
-  export default App;
+  export default App4;
 
   

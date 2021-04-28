@@ -1,6 +1,9 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {GlobalContext} from "../App";
 
-export default function NewTodo({setTodos}) {
+export default function NewTodo() {
+
+    const {setTodos} = useContext(GlobalContext);
 
     const [newTodo, setNewTodo] = useState("");
 

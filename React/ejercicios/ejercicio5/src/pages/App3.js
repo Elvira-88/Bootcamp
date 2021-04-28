@@ -1,5 +1,5 @@
 import {useState} from "react";
-// import './App.css';
+
 import Schedule from "../components/Schedule";
 import Form from "../components/Form"
 

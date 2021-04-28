@@ -1,6 +1,10 @@
 import "./TodoList.css";
+import {useContext} from "react";
+import {GlobalContext} from "../App";
 
-export default function TodoList({todos, setTodos}) {
+export default function TodoList() {
+
+    const {todos, setTodos} = useContext(GlobalContext);
 
     const removeTodo = (title) => setTodos(todos.filter(todo => todo.title !== title));
 

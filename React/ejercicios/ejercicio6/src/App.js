@@ -7,7 +7,7 @@ import App2 from "./pages/App2";
 import App3 from "./pages/App3";
 import App4 from "./pages/App4";
 
-// import Fetch from "./hooks/useFetch";
+import {useFetch} from "./hooks/useFetch";
 
 export const GlobalContext = createContext();
 
@@ -21,11 +21,11 @@ function App() {
 
   const [contacts, setContacts] = useState(initialContactsState);
 
-  const [todos, setToDos] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   const API_TODOS = "https://raw.githubusercontent.com/BC-FSWD/todo-list/master/todo-list.json";
 
-  useFetch(API_TODOS, setTodos, 20)
+  useFetch(API_TODOS, setTodos, 20);
 
   return (
     <div className="App">

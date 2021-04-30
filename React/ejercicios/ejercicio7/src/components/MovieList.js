@@ -1,26 +1,16 @@
-export default function MovieList({premiers}) {
+import {useState} from "react";
+import {useHistory} from "react-router-dom";
 
+export default function MovieList({premiers}) {     
 
-    // import {useState} from "react";
-    // import {useHistory} from "react-router-dom";
-    
-    // export default function Dashboard() {
-    
-    //     const [userID, setUserID] = useState(1);
-    
-    //     const history = useHistory();
-    
-    //     function handleClick(event) {
-    //         history.push(`/record/${userID}`);
-    //     }
-    
-    //     return (
-    //         <div>
-    //             <input type="text" onChange={e => setUserID(e.target.value)} value={userID}/>
-    //             <button onClick={handleClick}>Ir a perfil del usuario {userID}</button>
-    //         </div>
-    //     )
+    // const [userID, setUserID] = useState(1);
+
+    // const history = useHistory();
+
+    // function handleClick(event) {
+    //     history.push(`/record/${userID}`);
     // }
+    
     
 
     return (
@@ -34,7 +24,7 @@ export default function MovieList({premiers}) {
                       <p className="card-text">Synopsis: {premier.overview}</p>
                       <date>Estreno: {premier.release_date}</date>           
                     </div> 
-                    <button className="btn bg-success">More details</button>
+                    <button onClick={handleClick}className="btn bg-success">More details</button>
                     </>               
                 )
             })}

@@ -3,30 +3,32 @@ import './App.css';
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
 
-
+import PageMovieList from "../pages/PageMovieList";
+import PageMovieDetails from "../pages/PageMovieDetails";
 
 function App() {
 
-  const [premiers, setPremiers] = useState([]);
-
-  useEffect(() => {
-
-    const API_PREMIERS = "https://api.themoviedb.org/3/movie/upcoming?api_key=324e27dded078adf3d8c53b3ee955a39";
-
-    fetch(API_PREMIERS)
-    .then(response => response.json())
-    .then(data => setPremiers(data.results))   
-  },[])
 
   return (
+
     <div className="App">
-      <h1>PREMIERS</h1>
-      <MovieList premiers={premiers} setPremiers={setPremiers}/>
-      <MovieDetails premiers={premiers} setPremiers={setPremiers}/>
-    </div>
+
+    <BrowserRouter>                                    
+
+        <GlobalContext.Provider value={{premiers, setPremiers}}>
+              <Switch>
+                  <Route exact path="/pages/PageMovieList" component={PageMovieList}/>   
+                  <Route path="/pages/PageMovieDetails" component={PageMovieDetails}/>                      
+              </Switch> 
+        </GlobalContext.Provider>     
+                 
+    </BrowserRouter>
+
+  </div>
+ 
   );
 }
 
 export default App;
 
-// https://api.themoviedb.org/3/movie/550?api_key=324e27dded078adf3d8c53b3ee955a39
+

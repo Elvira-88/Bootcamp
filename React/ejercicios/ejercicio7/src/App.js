@@ -1,27 +1,26 @@
-import {useState, useEffect} from 'react';
 import './App.css';
+
 import MovieList from "./components/MovieList";
 import MovieDetails from "./components/MovieDetails";
 
-import PageMovieList from "../pages/PageMovieList";
-import PageMovieDetails from "../pages/PageMovieDetails";
+
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
 
-
-  return (
+   return (
 
     <div className="App">
 
+        <h1>PREMIERS</h1>     
+
     <BrowserRouter>                                    
 
-        <GlobalContext.Provider value={{premiers, setPremiers}}>
-              <Switch>
-                  <Route exact path="/pages/PageMovieList" component={PageMovieList}/>   
-                  <Route path="/pages/PageMovieDetails" component={PageMovieDetails}/>                      
-              </Switch> 
-        </GlobalContext.Provider>     
-                 
+      <Switch>
+          <Route exact path="/" component={MovieList}/>   
+          <Route path="/details/:id" component={MovieDetails}/>                      
+      </Switch> 
+                    
     </BrowserRouter>
 
   </div>

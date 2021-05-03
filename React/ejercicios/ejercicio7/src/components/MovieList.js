@@ -5,37 +5,35 @@ import {useHistory} from "react-router-dom";
 
 export default function MovieList() {  
     
-    const [premiers, setPremiers] = useState([]);
+    const [premieres, setPremieres] = useState([]);
 
     useEffect(() => {
   
-      const API_PREMIERS = "https://api.themoviedb.org/3/movie/upcoming?api_key=324e27dded078adf3d8c53b3ee955a39";
+      const API_PREMIERES = "https://api.themoviedb.org/3/movie/upcoming?api_key=324e27dded078adf3d8c53b3ee955a39";
   
-      fetch(API_PREMIERS)
+      fetch(API_PREMIERES)
       .then(response => response.json())
-      .then(data => setPremiers(data.results))   
+      .then(data => setPremieres(data.results))   
     },[])
   
-    const [movie_id, setMovie_id] = useState();
-
     const history = useHistory();
 
-    function handleClick() {
+    function handleClick(movie_id) {
         history.push(`/details/${movie_id}`);
     }      
 
     return (
         <div className="card w-50 m-auto">
-            {premiers.map((premier) => {
+            {premieres.map((premiere) => {
                 return (
                     <>
-                    <img src={`https://image.tmdb.org/t/p/w500${premier.poster_path}`} className="card-img-top" alt="..."/>
+                    <img src={`https://image.tmdb.org/t/p/w500${premiere.poster_path}`} className="card-img-top" alt="..."/>
                     <div className="card-body">
-                      <h5 className="card-title">Title: {premier.title}</h5>
-                      <p className="card-text">Synopsis: {premier.overview}</p>
-                      <date>Estreno: {premier.release_date}</date>           
+                      <h5 className="card-title">Title: {premiere.title}</h5>
+                      <p className="card-text">Synopsis: {premiere.overview}</p>
+                      <date>Estreno: {premiere.release_date}</date>           
                     </div> 
-                    <button onClick={handleClick} className="btn bg-success" >More details</button>
+                    <button onClick={() => handleClick(premiere.id)} className="btn bg-success">More details {premiere.id}</button>
                     </>               
                 )
             })}
@@ -43,5 +41,3 @@ export default function MovieList() {
     )
 }
 
-{/* <input type="text" onChange={e => setUserID(e.target.value)} value={userID}/>
-<button onClick={handleClick}>Ir a perfil del usuario {userID}</button> */}

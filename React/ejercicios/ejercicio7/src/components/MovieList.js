@@ -16,13 +16,13 @@ export default function MovieList() {
       .then(data => setPremiers(data.results))   
     },[])
   
-    // const [movie_id, setMovie_id] = useState();
+    const [movie_id, setMovie_id] = useState();
 
-    // const history = useHistory();
+    const history = useHistory();
 
-    // function handleClick(event) {
-    //     history.push(`/film/${event.target.id}`);
-    // }      
+    function handleClick() {
+        history.push(`/details/${movie_id}`);
+    }      
 
     return (
         <div className="card w-50 m-auto">
@@ -35,10 +35,13 @@ export default function MovieList() {
                       <p className="card-text">Synopsis: {premier.overview}</p>
                       <date>Estreno: {premier.release_date}</date>           
                     </div> 
-                    {/* <button onClick={handleClick}className="btn bg-success" id={id}>More details</button> */}
+                    <button onClick={handleClick} className="btn bg-success" >More details</button>
                     </>               
                 )
             })}
         </div>
     )
 }
+
+{/* <input type="text" onChange={e => setUserID(e.target.value)} value={userID}/>
+<button onClick={handleClick}>Ir a perfil del usuario {userID}</button> */}

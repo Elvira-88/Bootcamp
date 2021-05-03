@@ -7,7 +7,7 @@ export default function Dashboard() {
 
     const history = useHistory();
 
-    function handleClick(event) {
+    function handleClick() {
         history.push(`/record/${userID}`);
     }
 

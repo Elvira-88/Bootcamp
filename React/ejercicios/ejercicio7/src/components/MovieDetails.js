@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 
 export default function MovieDetails() {
@@ -16,7 +17,6 @@ export default function MovieDetails() {
       .then(data => setDetails(data))   
     },[])
 
-
     return (
 
         <div className="App">
@@ -27,6 +27,7 @@ export default function MovieDetails() {
                 <date>Estreno: {details.release_date}</date> 
                 <p className="card-text">Rating: {details.vote_average}</p>          
             </div>   
+            <a href={`https://www.imdb.com/title/${details.imdb_id}`}><button>IMdb</button></a>
             <footer>Footer</footer>     
        </div>
 

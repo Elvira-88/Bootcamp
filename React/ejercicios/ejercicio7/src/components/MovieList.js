@@ -1,8 +1,6 @@
 import {useState, useEffect} from "react";
 import {useHistory} from "react-router-dom";
 
-
-
 export default function MovieList() {  
     
     const [premieres, setPremieres] = useState([]);
@@ -15,15 +13,17 @@ export default function MovieList() {
       .then(response => response.json())
       .then(data => setPremieres(data.results))   
     },[])
-  
-    const history = useHistory();
 
+    const history = useHistory();
+  
     function handleClick(movie_id) {
         history.push(`/details/${movie_id}`);
     }      
 
     return (
-        <div className="card w-50 m-auto">
+        <div>
+            <input type="text"/>
+            <div className="card w-50 m-auto">
             {premieres.map((premiere) => {
                 return (
                     <>
@@ -33,11 +33,15 @@ export default function MovieList() {
                       <p className="card-text">Synopsis: {premiere.overview}</p>
                       <date>Estreno: {premiere.release_date}</date>           
                     </div> 
-                    <button onClick={() => handleClick(premiere.id)} className="btn bg-success">More details {premiere.id}</button>
+                    <button onClick={() => handleClick(premiere.id)} className="btn bg-success">More details</button>
+                    <footer>Footer</footer> 
                     </>               
                 )
             })}
         </div>
+
+        </div>
+   
     )
 }
 

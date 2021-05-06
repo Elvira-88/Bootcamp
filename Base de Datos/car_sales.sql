@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-05-2021 a las 12:52:07
+-- Tiempo de generación: 07-05-2021 a las 00:33:27
 -- Versión del servidor: 8.0.23-0ubuntu0.20.04.1
 -- Versión de PHP: 7.4.3
 
@@ -41,10 +41,10 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_details`, `name`, `address`, `phone_number`) VALUES
-(1, 'Detalles cliente 1', NULL, NULL, NULL),
-(2, 'Detalles cliente 2', NULL, NULL, NULL),
-(3, 'Detalles cliente 3', NULL, NULL, NULL),
-(4, 'Detalles cliente 4', NULL, NULL, NULL),
+(1, 'Detalles cliente 1', 'John', NULL, NULL),
+(2, 'Detalles cliente 2', 'Peter', NULL, NULL),
+(3, 'Detalles cliente 3', 'Martha', NULL, NULL),
+(4, 'Detalles cliente 4', 'Sarah', NULL, NULL),
 (5, 'Detalles cliente 1', 'John', 'Calle X', '9012312'),
 (6, 'Detalles cliente 2', 'Peter', 'Calle Y', '5012312'),
 (7, 'Detalles cliente 3', 'Sarah', 'Calle Z', '6012312'),
@@ -68,13 +68,13 @@ CREATE TABLE `deliveries` (
 --
 
 INSERT INTO `deliveries` (`delivery_id`, `sale_id`, `delivery_date`, `other_details`) VALUES
-(1, 1, '2020-01-01', ''),
-(3, 2, '2020-01-01', ''),
-(4, 3, '2020-01-01', ''),
-(5, 4, '2020-01-01', ''),
-(6, 5, '2020-01-01', ''),
-(7, 6, '2020-01-01', ''),
-(8, 7, '2020-01-01', '');
+(1, 1, '2020-03-11', ''),
+(3, 2, '2019-12-09', ''),
+(4, 3, '2019-09-25', ''),
+(5, 4, '2020-03-27', ''),
+(6, 5, '2020-02-06', ''),
+(7, 6, '2019-11-18', ''),
+(8, 7, '2020-01-13', '');
 
 -- --------------------------------------------------------
 
@@ -120,13 +120,13 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`sale_id`, `customer_id`, `vehicle_id`, `sale_date`, `other_details`, `price`) VALUES
-(1, 1, 1, '2015-01-01', '', 20000),
-(2, 1, 3, '2011-01-01', '', 10000),
+(1, 1, 1, '2020-11-11', '', 20000),
+(2, 1, 3, '2021-02-20', '', 7000),
 (3, 2, 7, '2015-01-01', '', 850000),
 (4, 2, 2, '2012-01-01', '', 70000),
-(5, 3, 4, '2013-01-01', '', 25000),
+(5, 3, 4, '2020-07-13', '', 25000),
 (6, 4, 5, '2014-01-01', '', 300000),
-(7, 4, 6, '2015-01-01', '', 450000);
+(7, 4, 6, '2021-05-10', '', 15000);
 
 -- --------------------------------------------------------
 

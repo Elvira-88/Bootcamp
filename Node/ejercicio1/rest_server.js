@@ -7,7 +7,6 @@ app.use(express.json());
 
 let users = [];
 
-
 app.get("/users", (req, res) => {
     const user = {name: "John", email: "john@gmail.com"}
     res.json({ok: true, results: users});

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-let Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
+const uniqueValidator = require("mongoose-unique-validator")
 
 const validRoles = {
     values: ["ADMIN", "USER"],
@@ -33,6 +33,6 @@ let userSchema = new Schema({
     }
 });
 
-userSchema.plugin(uniqueValidator, {message: "{PATH} should be uniqiue"})
+userSchema.plugin(uniqueValidator, {message: "{PATH} should be unique"})
 
 module.exports = mongoose.model("User", userSchema);

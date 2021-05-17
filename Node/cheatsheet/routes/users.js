@@ -6,12 +6,27 @@ const express = require("express");
 const router = express.Router();
 
 const User = require("../models/user");
+const verifyToken = require("../middlewares/auth");
 
-router.get("/", (req, res) => {
+const middleware1 = (req, res, next) => {
+    console.log("Hola desde el middleware 1");
+    next();
+}
+
+const middleware2 = (req, res, next) => {
+    console.log("Hola desde el middleware 2");
+    next();
+}
+
+router.get("/", verifyToken, async (req, res) => {
+    console.log("Hola desde dentro del get");
+
     // Similar al find de Mongo. Si el filtro está vacío,
     // me devuelve todos los documentos.
     const PAGE_SIZE = 2;
     const page = req.query.page || 1;
+
+    const count = await User.count();
 
     User.find({active: true})
     .skip((page - 1) * PAGE_SIZE) // Número de documentos que saltará
@@ -20,7 +35,7 @@ router.get("/", (req, res) => {
         if(error) {
             res.status(400).json({ok: false, error});
         } else {
-            res.status(200).json({ok: true, users});
+            res.status(200).json({ok: true, page, pageSize: PAGE_SIZE, count, users});
         }
     })
 });

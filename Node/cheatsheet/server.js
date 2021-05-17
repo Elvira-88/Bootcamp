@@ -1,19 +1,12 @@
-// importamos nuestro archivo config con las variables de entorno
-require("./config/config");
-
 const mongoose = require("mongoose")
 const express = require("express");
 const app = express();
-
-const users = require("./routes/users");
-const login = require("./routes/login");
 
 // Antes de los endpoints, usamos los middlewares
 
 app.use(express.json());
 
-app.use("/users", users);
-app.use("/login", login);
+app.use(require("./routes"));
 
 mongoose.connect("mongodb://localhost:27017/users", {
     useNewUrlParser: true,

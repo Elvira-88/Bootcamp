@@ -1,13 +1,13 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import './App.css';
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
-import login from "./pages/login";
-import register from "./pages/register";
-import courses from "./pages/courses";
-import team from "./pages/team";
+import home from "./pages/home/home";
+import login from "./pages/login/login";
+import register from "./pages/register/register";
+import courses from "./pages/courses/courses";
+import team from "./pages/team/team";
 // import company from "./pages/company";
 
 function App() {
@@ -18,10 +18,11 @@ function App() {
         <Navbar/>
 
         <Switch>
-          <Route path="/pages/login" component={login}/>
-          <Route path="/pages/register" component={register}/>
-          <Route path="/pages/courses" component={courses}/>
-          <Route path="/pages/team" component={team}/>
+          <Route path="/home" component={home}/>
+          <Route path="/login" component={login}/>
+          <Route path="/register" component={register}/>
+          <Route path="/courses" component={courses}/>
+          <Route path="/team" component={team}/>
           
         </Switch>
 
